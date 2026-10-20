@@ -51,8 +51,8 @@ export default function ProductImage({ src, alt, aspect = "1/1", slot, caption, 
            path is never an <img src> — the file is not there, and a browser
            that asks for it reads as this product borrowing a neighbour's
            picture until it fails. */
-        <div data-picture={slot || undefined} data-fit="contain" role="img" aria-label={alt}
-          className="absolute inset-0 flex h-full w-full items-end bg-surface text-ink-soft">
+        <div data-picture={slot || undefined} data-product-slot="" data-fit="contain" role="img" aria-label={alt}
+          className="absolute inset-0 flex h-full w-full items-end">
           <span className="p-4 text-sm">{caption ?? alt}</span>
         </div>
       )}
