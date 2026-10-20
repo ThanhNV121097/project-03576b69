@@ -18,6 +18,11 @@ export default function ShopRail({ categories, category, total, sort, onSort }: 
 }) {
   const allLabel = useContent<string>("shop.all");
   const sortLabel = useContent<string>("shop.sortLabel");
+  const sortNames: Record<Sort, string> = {
+    default: useContent<string>("shop.sort.default"),
+    priceUp: useContent<string>("shop.sort.priceUp"),
+    priceDown: useContent<string>("shop.sort.priceDown"),
+  };
   const link = "label flex items-center justify-between gap-3 border-b border-line pb-2 transition-colors duration-[var(--duration-fast)]";
   const on = "text-accent";
   const off = "text-ink-soft hover:text-ink";
