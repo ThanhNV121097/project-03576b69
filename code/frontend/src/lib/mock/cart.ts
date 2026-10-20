@@ -1,4 +1,5 @@
 import { useSyncExternalStore } from "react";
+import { collections } from "../../data";
 
 /**
  * The cart, in the browser. The backend story replaces this module with the
