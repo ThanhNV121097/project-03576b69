@@ -202,22 +202,25 @@ export function DirectionThree() {
         <div className="d3__stage">
           <img src="/images/turntable-close.jpg" alt="A record playing in the Folsom Street showroom" />
           <div className="d3__price">
-            <div className="d3__price-name">Twelve things, in stock</div>
-            <div className="d3__price-fig dir__num">
-              $39—1,890
-            </div>
+            <div className="d3__price-name">Set up in the room, today</div>
+            <div className="d3__price-fig dir__num">12</div>
           </div>
         </div>
       </div>
       <div className="d3__band">
         <img src="/images/speaker-macro.jpg" alt="A speaker driver, close up" />
         <div className="d3__band-inner">
-          {band.map((l) => (
-            <div className="d3__band-cell" key={l.name}>
-              <div className="d3__band-name">{l.name}</div>
-              <div className="d3__band-sub">{l.spec}</div>
-              <div className="d3__band-price dir__num">{usd(l.price)}</div>
-            </div>
+          {PICTURED.map((p) => (
+            <article className="d3__band-cell" key={p.name}>
+              <div className="d3__band-pic">
+                <img src={p.img} alt={p.name} />
+              </div>
+              <div className="d3__band-text">
+                <div className="d3__band-name">{p.name}</div>
+                <div className="d3__band-sub">{p.spec}</div>
+                <div className="d3__band-price dir__num">{usd(p.price)}</div>
+              </div>
+            </article>
           ))}
         </div>
       </div>
