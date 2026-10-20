@@ -132,9 +132,6 @@ export function DirectionTwo() {
     <div className="dir d2">
       <div className="d2__hero">
         <img src="/images/studio-wide.jpg" alt="A room set up for listening" />
-        <div className="d2__strip">
-          <img src="/images/speaker-macro.jpg" alt="A speaker driver, close up" />
-        </div>
         <div className="d2__rail">
           <span>Loop Audio · 1142 Folsom Street · since 2019</span>
         </div>
