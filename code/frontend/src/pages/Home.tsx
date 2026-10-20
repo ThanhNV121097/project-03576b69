@@ -156,7 +156,7 @@ function Rest() {
           <Icon name="arrow" size={16} />
         </Link>
       </div>
-      <Grid max={3} className="mt-8">
+      <Grid max={4} className="mt-8">
         {rest.map((p) => <ProductCard key={p.id} product={p} />)}
       </Grid>
     </Reveal>
