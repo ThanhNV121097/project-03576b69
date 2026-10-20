@@ -67,6 +67,8 @@
   --duration-fast: 160ms;
   --duration-base: 600ms;
   --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  /* the stagger of the load sequence: each .rise element sets its own */
+  --rise-delay: 0ms;
 
   /* layout */
   --page: 1440px;
