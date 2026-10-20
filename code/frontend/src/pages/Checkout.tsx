@@ -101,7 +101,7 @@ export default function Checkout() {
             <label className="flex flex-col gap-2 text-sm">
               <T k="checkout.email" className="label text-ink-soft" />
               <input id="receipt-email" name="receipt-email" type="email" autoComplete="email"
-                defaultValue={session?.email ?? ""} required className="w-full border border-line bg-ground px-4 py-3 text-ink" />
+                defaultValue={session?.email ?? ""} required className={textInput} />
             </label>
           </div>
 
