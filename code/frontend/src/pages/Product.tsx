@@ -81,7 +81,7 @@ export default function Product() {
                 <Icon name="minus" size={16} />
               </button>
               <output id="quantity" data-testid="quantity" className="tabular w-10 text-center font-display">{quantity}</output>
-              <button type="button" aria-label={useContent<string>("product.more")} data-testid="quantity-plus"
+              <button type="button" aria-label={moreLabel} data-testid="quantity-plus"
                 onClick={() => setQuantity((q) => Math.min(item.stock || 99, q + 1))}
                 className="grid h-12 w-12 place-items-center text-ink-soft transition-colors duration-[var(--duration-fast)] hover:text-accent">
                 <Icon name="plus" size={16} />
