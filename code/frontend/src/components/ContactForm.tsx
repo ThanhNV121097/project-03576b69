@@ -43,7 +43,7 @@ export default function ContactForm({ fields = [], className = "" }: { fields?: 
   if (state === "sent") {
     return <T k="contact.form.sent" as="p" className={`text-lg ${className}`} />;
   }
-  const input = "w-full rounded border border-line bg-ground px-4 py-3 text-ink placeholder:text-ink-soft";
+  const input = "w-full rounded bg-ground px-4 py-3 text-ink placeholder:text-ink-soft";
   return (
     <form data-testid="contact-form" onSubmit={(e) => void submit(e)} className={`flex flex-col gap-4 ${className}`}>
       <Field k="name"><input id="name" name="name" autoComplete="name" required className={input} /></Field>
