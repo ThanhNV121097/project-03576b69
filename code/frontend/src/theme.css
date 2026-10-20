@@ -1,48 +1,58 @@
-/* The design's tokens. Every colour, face and shape on the site is one of
-   these, so the owner changes the whole site by changing a value here — in
-   the Studio, without a rebuild. Components never carry a raw colour.
+/**
+ * Loop Audio — "Put the room in the picture".
+ *
+ * The owner chose this direction: a near-black ground, one amber accent the
+ * colour of a valve lamp and of the showroom's light, Syne for display and
+ * Inter for text. Light is the default palette here in :root; the dark
+ * palette below is a dark reading of the same seven values.
+ *
+ * Every colour, face, size, space, radius, shadow and duration the site uses
+ * is one of these. A story that needs a value not here stops and asks.
+ */
 
-   THE PALETTE BELOW IS A PLACEHOLDER AND CI REFUSES IT. Every value still
-   marked UNSET has to be replaced with this business's own — in the light
-   block here and in the two dark blocks at the foot of the file — and the
-   UNSET marker removed with it.
-
-   It used to ship a finished cream-and-clay palette, and that is exactly why
-   it has to go. Three designs in a row — a golf club, a coffee roastery and
-   an audio shop — came back with it: one of them byte for byte, the other two
-   within a few per cent. A default good enough to ship is the strongest
-   anchor there is, because changing it is risk with no reward. Nothing was
-   wrong with those colours except that nobody chose them. */
 :root {
-  --ground: #E7E5E4; /* UNSET */
-  --surface: #FFFFFF; /* UNSET */
-  --ink: #1C1917; /* UNSET */
-  --ink-soft: #57534E; /* UNSET */
-  --accent: #7C3AED; /* UNSET */
-  --accent-ink: #FFFFFF; /* UNSET */
-  --line: rgba(28, 25, 23, 0.12); /* UNSET */
-  color-scheme: light;
+  /* colour — the owner's chosen light palette, exactly */
+  --ground: #F2F0ED;
+  --surface: #FFFFFF;
+  --ink: #0B0B0C;
+  --ink-soft: #57544E;
+  --accent: #9A6206;
+  --accent-ink: #FFFFFF;
+  --line: #D9D5CE;
 
-  /* House style: one clean sans, headings confident but not heavy — an h1
-     at most 76px and an h2 at most 52px at 1440px. Inter is the fallback a
-     design falls back TO, not the one it falls into by saying nothing: name
-     the face this business uses, even when the answer is Inter. */
-  --font-display: "Inter"; /* UNSET */
-  --font-body: "Inter"; /* UNSET */
-  --weight-display: 500;
-  --tracking-display: -0.02em;
-  /* The scale a landing page wants, which is not the scale a shop wants.
-     Choose both for what this site has to fit; 76px / 52px is the ceiling,
-     not the target. */
-  --size-h1: clamp(2.5rem, 5.4vw, 4.75rem); /* UNSET */
-  --size-h2: clamp(2rem, 3.6vw, 3.25rem); /* UNSET */
+  /* the lit panel a cut-out product sits on, light in both modes */
+  --product-ground: #EFECE6;
 
-  --radius: 12px;
-  --radius-sm: 6px;
+  /* the ground of the hero photograph and of the dark product cards, in both
+     modes: this design's first screen is dark whichever mode the visitor is
+     in, because the photograph is a dark room */
+  --room: #0B0B0C;
+  --room-surface: #15161A;
+  --room-ink: #F2F0ED;
+  --room-ink-soft: #9A9790;
+  --room-line: #2A2B30;
+  --room-accent: #E8A33D;
+
+  /* typography */
+  --font-display: "Syne", "Inter", system-ui, sans-serif;
+  --font-body: "Inter", system-ui, sans-serif;
+  --weight-display: 600;
+  --tracking-display: -0.03em;
+  --size-h1: clamp(34px, 5.2vw, 64px);
+  --size-h2: clamp(22px, 2.4vw, 28px);
+  --size-h3: 20px;
+  --size-price: 24px;
+  --size-price-lg: 34px;
+  --size-label: 11px;
+  --tracking-label: 0.22em;
+  --leading-display: 1.02;
+
+  /* radius */
+  --radius: 4px;
+  --radius-sm: 2px;
   --radius-pill: 999px;
 
-  /* Spacing, shadow and motion: one scale each, so a story can always name a
-     value. A category the design does not use stays defined and unused. */
+  /* spacing */
   --space-1: 4px;
   --space-2: 8px;
   --space-3: 12px;
@@ -51,48 +61,122 @@
   --space-8: 32px;
   --space-12: 48px;
   --space-16: 64px;
-  --shadow-sm: 0 1px 2px rgba(27, 25, 23, 0.06);
-  --shadow-md: 0 8px 24px -12px rgba(27, 25, 23, 0.25);
-  --duration-fast: 120ms;
-  --duration-base: 220ms;
-  --ease-out: cubic-bezier(0.2, 0.7, 0.2, 1);
+  --space-24: 96px;
 
-  --page: 1160px;
-  --gutter: clamp(20px, 5.5vw, 72px);
-  --header-h: 64px;
-  /* What a page keeps clear at its foot below 1024px while ContactDock
-     floats there: the 56px buttons, their 16px offset and a margin. */
-  --dock-space: calc(88px + env(safe-area-inset-bottom, 0px));
-  /* The tile behind a product picture (ProductImage). Light in both modes:
-     the tools cut products out of a white studio backdrop, and a white or
-     silver product cut out onto a dark ground loses its shading. */
-  --product-ground: #F2F2F4;
+  /* shadow — one, and only under a floating control */
+  --shadow-sm: 0 1px 2px rgb(11 11 12 / 0.10);
+  --shadow-md: 0 8px 24px rgb(11 11 12 / 0.18);
+
+  /* motion */
+  --duration-fast: 160ms;
+  --duration-base: 600ms;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+
+  /* layout */
+  --page: 1440px;
+  --gutter: clamp(20px, 4vw, 56px);
+  --header-h: 72px;
+  --dock-space: 0px;
 }
 
-/* Dark. Light above is the default; the visitor's system setting picks dark
-   unless they chose light with the header's switch (ThemeToggle), which sets
-   data-theme on <html> and remembers it. Set both palettes for the design. */
+@media (max-width: 1023px) {
+  :root { --dock-space: 88px; }
+}
+
 @media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ground: #1C1917; /* UNSET */
-    --surface: #292524; /* UNSET */
-    --ink: #F5F5F4; /* UNSET */
-    --ink-soft: #A8A29E; /* UNSET */
-    --accent: #A78BFA; /* UNSET */
-    --accent-ink: #1C1917; /* UNSET */
-    --line: rgba(245, 245, 244, 0.14); /* UNSET */
-    --product-ground: #E4E4E7;
-    color-scheme: dark;
+  :root {
+    --ground: #0B0B0C;
+    --surface: #15161A;
+    --ink: #F2F0ED;
+    --ink-soft: #9A9790;
+    --accent: #E8A33D;
+    --accent-ink: #0B0B0C;
+    --line: #2A2B30;
+    --product-ground: #E6E3DD;
   }
 }
-:root[data-theme="dark"] {
-  --ground: #1C1917; /* UNSET */
-  --surface: #292524; /* UNSET */
-  --ink: #F5F5F4; /* UNSET */
-  --ink-soft: #A8A29E; /* UNSET */
-  --accent: #A78BFA; /* UNSET */
-  --accent-ink: #1C1917; /* UNSET */
-  --line: rgba(245, 245, 244, 0.14); /* UNSET */
-  --product-ground: #E4E4E7;
-  color-scheme: dark;
+
+[data-theme="dark"] {
+  --ground: #0B0B0C;
+  --surface: #15161A;
+  --ink: #F2F0ED;
+  --ink-soft: #9A9790;
+  --accent: #E8A33D;
+  --accent-ink: #0B0B0C;
+  --line: #2A2B30;
+  --product-ground: #E6E3DD;
+}
+
+[data-theme="light"] {
+  --ground: #F2F0ED;
+  --surface: #FFFFFF;
+  --ink: #0B0B0C;
+  --ink-soft: #57544E;
+  --accent: #9A6206;
+  --accent-ink: #FFFFFF;
+  --line: #D9D5CE;
+  --product-ground: #EFECE6;
+}
+
+/* Tailwind's preflight sets every heading to font-weight: inherit, so the
+   display face's weight and tracking are stated here or nowhere. */
+h1, h2, h3, .display {
+  font-family: var(--font-display);
+  font-weight: var(--weight-display);
+  letter-spacing: var(--tracking-display);
+  line-height: var(--leading-display);
+}
+
+h1 { font-size: var(--size-h1); }
+h2 { font-size: var(--size-h2); }
+h3 { font-size: var(--size-h3); }
+
+/* Prices and quantities: the digits have to stack in a column. */
+.tabular { font-variant-numeric: tabular-nums; font-feature-settings: "tnum" 1; }
+
+.label {
+  font-size: var(--size-label);
+  letter-spacing: var(--tracking-label);
+  text-transform: uppercase;
+  font-family: var(--font-body);
+  font-weight: 500;
+}
+
+/* The dark band: the hero photograph and the product cards on it keep the
+   room's colours in light mode too. */
+.room {
+  --ground: var(--room);
+  --surface: var(--room-surface);
+  --ink: var(--room-ink);
+  --ink-soft: var(--room-ink-soft);
+  --line: var(--room-line);
+  --accent: var(--room-accent);
+  --accent-ink: var(--room);
+  background: var(--room);
+  color: var(--room-ink);
+}
+
+:where(a, button, input, textarea, select, [tabindex]):focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* The load sequence and the section reveals. */
+@keyframes rise {
+  from { opacity: 0; transform: translateY(16px); }
+  to { opacity: 1; transform: none; }
+}
+
+.rise {
+  animation: rise var(--duration-base) var(--ease-out) both;
+  animation-delay: var(--rise-delay, 0ms);
+}
+
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
+.reveal[data-shown="true"] { opacity: 1; transform: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  .rise { animation: none; }
+  .reveal, .reveal[data-shown="true"] { opacity: 1; transform: none; transition: none; }
+  * { scroll-behavior: auto !important; }
 }
