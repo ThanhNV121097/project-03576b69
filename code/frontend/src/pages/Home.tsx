@@ -78,8 +78,9 @@ function Hero({ featured }: { featured: Product[] }) {
 
         {/* Three featured products on dark tiles along the bottom of the screen. */}
         <div className="mx-auto mt-[clamp(24px,4vh,48px)] w-full max-w-page px-[var(--gutter)] pb-[clamp(20px,4vh,44px)]">
-          <T k="hero.featuredLabel" as="p" className="label rise mb-4 text-ink-soft"
-            style={{ ["--rise-delay" as string]: "320ms" }} />
+          <div className="rise" style={{ ["--rise-delay" as string]: "320ms" }}>
+            <T k="hero.featuredLabel" as="p" className="label mb-4 text-ink-soft" />
+          </div>
           <ul className="rise grid grid-cols-1 gap-3 sm:grid-cols-3" style={{ ["--rise-delay" as string]: "380ms" }}>
             {featured.map((p) => (
               <li key={p.id}>
