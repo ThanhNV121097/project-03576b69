@@ -152,8 +152,16 @@ h3 { font-size: var(--size-h3); }
   --accent: #E8A33D;
   --accent-ink: #0B0B0C;
   --product-ground: #E6E3DD;
+  --field-line: #5B5C64;
   background: var(--ground);
   color: var(--ink);
+}
+
+/* The empty-picture block sits INSIDE the light product tile, so its ink is
+   the tile's, not the page's — a dark block there read as a missing picture. */
+[data-product-slot] {
+  background: var(--product-ground);
+  color: var(--product-ink);
 }
 
 :where(a, button, input, textarea, select, [tabindex]):focus-visible {
