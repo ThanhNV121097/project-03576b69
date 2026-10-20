@@ -42,6 +42,12 @@ export default function Order() {
           <Row label="order.total"><Price amount={order.total} className="text-accent" /></Row>
         </dl>
       )}
+        <ul className="flex h-fit flex-col gap-4 border-t border-line pt-5 text-sm text-ink-soft">
+          <li className="flex items-start gap-3"><Icon name="shipping" size={16} className="mt-[2px] text-accent" /><T k="product.shipping" /></li>
+          <li className="flex items-start gap-3"><Icon name="returns" size={16} className="mt-[2px] text-accent" /><T k="product.returns" /></li>
+          <li className="flex items-start gap-3"><Icon name="quality" size={16} className="mt-[2px] text-accent" /><T k="product.warranty" /></li>
+        </ul>
+      </div>
 
       <div className="mt-12 flex flex-wrap gap-3">
         <Link to="/account" data-testid="order-account"
