@@ -30,8 +30,11 @@ export default function Order() {
       </h1>
       <T k="order.sub" as="p" className="mt-5 max-w-[52ch] leading-relaxed text-ink-soft" />
 
+      {/* The order beside what happens to it next, so the right half of the
+          first screen carries the shipping and returns the buyer wants now. */}
+      <div className="mt-12 grid gap-10 lg:grid-cols-[1fr_300px] lg:gap-16">
       {order && (
-        <dl data-record={`orders:${order.id}`} className="mt-12 grid max-w-[640px] gap-0 border-t border-line">
+        <dl data-record={`orders:${order.id}`} className="grid gap-0 border-t border-line">
           <Row label="order.number"><span data-testid="order-number" className="tabular uppercase">{order.id}</span></Row>
           <Row label="order.placed"><span className="tabular">{formatDate(order.placed, "medium")}</span></Row>
           <Row label="order.status">{order.status}</Row>
