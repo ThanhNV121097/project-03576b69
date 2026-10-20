@@ -177,7 +177,7 @@ h3 { font-size: var(--size-h3); }
 
 .rise {
   animation: rise var(--duration-base) var(--ease-out) both;
-  animation-delay: var(--rise-delay, 0ms);
+  animation-delay: var(--rise-delay);
 }
 
 .reveal { opacity: 0; transform: translateY(16px); transition: opacity var(--duration-base) var(--ease-out), transform var(--duration-base) var(--ease-out); }
