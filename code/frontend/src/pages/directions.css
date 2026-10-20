@@ -11,14 +11,16 @@
 .dir *::before,
 .dir *::after { box-sizing: border-box; }
 .dir__tag {
-  position: absolute;
-  right: 28px;
-  bottom: 20px;
+  position: fixed;
+  right: 16px;
+  top: 16px;
   font: 400 10px/1 Inter, sans-serif;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  opacity: 0.55;
-  z-index: 5;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.55);
+  padding: 6px 9px;
+  z-index: 20;
 }
 .dir__num { font-variant-numeric: tabular-nums; }
 
