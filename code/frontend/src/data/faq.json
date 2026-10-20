@@ -7,7 +7,7 @@
   },
   {
     "id": "which-checkout",
-    "question": "",
+    "question": "Can I pay by card as well as Apple Pay?",
     "answer": "",
     "_source": "assumed"
   },
