@@ -93,7 +93,7 @@ export function cartTotals(items: CartLine[]) {
 
 /** The three lines the Studio, the walk and the owner's preview are shown. */
 export const exampleLines: CartLine[] = [
-  { id: "loop-one-wireless", name: "Loop One Wireless", price: 349, image: "/images/product-loop-one-wireless.png", unit: "pair", quantity: 1 },
+  { id: "loop-one-wireless", name: "Loop One Wireless", price: 349, image: "/images/products-loop-one-wireless.png", unit: "pair", quantity: 1 },
   { id: "harbour-mini", name: "Harbour Mini", price: 329, image: "", unit: "each", quantity: 2 },
   { id: "loop-cable-kit", name: "Loop Cable Kit", price: 59, image: "/images/product-loop-cable-kit.png", unit: "set", quantity: 1 },
 ];
