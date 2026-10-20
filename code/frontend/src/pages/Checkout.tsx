@@ -30,7 +30,8 @@ export default function Checkout() {
   const { subtotal, shipping, total } = cartTotals(lines);
   const methods = useList<{ icon: IconName; label: string }>("checkout.methods");
   const [paying, setPaying] = useState(false);
-  const input = "w-full border border-line bg-ground px-4 py-3 text-ink tabular";
+  const input = "w-full bg-ground px-4 py-3 text-ink tabular";
+  const textInput = "w-full bg-ground px-4 py-3 text-ink";
 
   if (!session && !demo) {
     return <SignInPanel noteKey="checkout.signInFirst" />;
