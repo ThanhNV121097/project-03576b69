@@ -21,7 +21,7 @@ export default function Cart() {
   usePageMeta("pages.cart.title", "pages.cart.description");
   const demo = useDemo();
   const real = useCart();
-  const lines = demo && real.length === 0 ? exampleLines : real;
+  const lines = demo && real.length === 0 ? exampleLines() : real;
   const { subtotal, shipping, total } = cartTotals(lines);
   const removeLabel = useContent<string>("cart.remove");
   const lessLabel = useContent<string>("cart.quantity");
