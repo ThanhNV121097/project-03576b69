@@ -373,7 +373,7 @@
 }
 .d3__price-fig s { font-size: 18px; color: #8d8d8d; margin-left: 10px; letter-spacing: 0; }
 
-.d3__band { position: relative; height: 254px; overflow: hidden; }
+.d3__band { position: relative; height: 232px; overflow: hidden; }
 .d3__band img {
   position: absolute;
   inset: 0;
