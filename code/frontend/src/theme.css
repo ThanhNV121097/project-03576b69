@@ -1,37 +1,29 @@
 /**
  * Loop Audio — "Put the room in the picture".
  *
- * The owner chose this direction: a near-black ground, one amber accent the
- * colour of a valve lamp and of the showroom's light, Syne for display and
- * Inter for text. Light is the default palette here in :root; the dark
- * palette below is a dark reading of the same seven values.
+ * The owner chose this direction and these values: a near-black ground, one
+ * amber accent the colour of a valve lamp and of the showroom's light, Syne
+ * for display and Inter for text. The seven colours in :root are theirs,
+ * exactly as they approved them; the dark palette below is a deeper reading
+ * of the same seven — the same room with the lamp turned down.
  *
  * Every colour, face, size, space, radius, shadow and duration the site uses
  * is one of these. A story that needs a value not here stops and asks.
  */
 
 :root {
-  /* colour — the owner's chosen light palette, exactly */
-  --ground: #F2F0ED;
-  --surface: #FFFFFF;
-  --ink: #0B0B0C;
-  --ink-soft: #57544E;
-  --accent: #9A6206;
-  --accent-ink: #FFFFFF;
-  --line: #D9D5CE;
+  /* colour — the owner's approved palette, exactly */
+  --ground: #0B0B0C;
+  --surface: #15161A;
+  --ink: #F2F0ED;
+  --ink-soft: #9A9790;
+  --line: #2A2B30;
+  --accent: #E8A33D;
+  --accent-ink: #0B0B0C;
 
-  /* the lit panel a cut-out product sits on, light in both modes */
-  --product-ground: #EFECE6;
-
-  /* the ground of the hero photograph and of the dark product cards, in both
-     modes: this design's first screen is dark whichever mode the visitor is
-     in, because the photograph is a dark room */
-  --room: #0B0B0C;
-  --room-surface: #15161A;
-  --room-ink: #F2F0ED;
-  --room-ink-soft: #9A9790;
-  --room-line: #2A2B30;
-  --room-accent: #E8A33D;
+  /* the lit panel a cut-out product sits on — light in both modes, because a
+     black or silver product cut out onto a dark ground loses its shading */
+  --product-ground: #E6E3DD;
 
   /* typography */
   --font-display: "Syne", "Inter", system-ui, sans-serif;
@@ -64,8 +56,8 @@
   --space-24: 96px;
 
   /* shadow — one, and only under a floating control */
-  --shadow-sm: 0 1px 2px rgb(11 11 12 / 0.10);
-  --shadow-md: 0 8px 24px rgb(11 11 12 / 0.18);
+  --shadow-sm: 0 1px 2px rgb(0 0 0 / 0.30);
+  --shadow-md: 0 8px 24px rgb(0 0 0 / 0.45);
 
   /* motion */
   --duration-fast: 160ms;
@@ -83,39 +75,40 @@
   :root { --dock-space: 88px; }
 }
 
+/* The lamp turned down: the same room, deeper. */
 @media (prefers-color-scheme: dark) {
   :root {
-    --ground: #0B0B0C;
-    --surface: #15161A;
-    --ink: #F2F0ED;
-    --ink-soft: #9A9790;
+    --ground: #050506;
+    --surface: #101115;
+    --ink: #EDEAE4;
+    --ink-soft: #8C8982;
+    --line: #22232A;
     --accent: #E8A33D;
-    --accent-ink: #0B0B0C;
-    --line: #2A2B30;
-    --product-ground: #E6E3DD;
+    --accent-ink: #050506;
+    --product-ground: #DCD8D1;
   }
 }
 
 [data-theme="dark"] {
+  --ground: #050506;
+  --surface: #101115;
+  --ink: #EDEAE4;
+  --ink-soft: #8C8982;
+  --line: #22232A;
+  --accent: #E8A33D;
+  --accent-ink: #050506;
+  --product-ground: #DCD8D1;
+}
+
+[data-theme="light"] {
   --ground: #0B0B0C;
   --surface: #15161A;
   --ink: #F2F0ED;
   --ink-soft: #9A9790;
+  --line: #2A2B30;
   --accent: #E8A33D;
   --accent-ink: #0B0B0C;
-  --line: #2A2B30;
   --product-ground: #E6E3DD;
-}
-
-[data-theme="light"] {
-  --ground: #F2F0ED;
-  --surface: #FFFFFF;
-  --ink: #0B0B0C;
-  --ink-soft: #57544E;
-  --accent: #9A6206;
-  --accent-ink: #FFFFFF;
-  --line: #D9D5CE;
-  --product-ground: #EFECE6;
 }
 
 /* Tailwind's preflight sets every heading to font-weight: inherit, so the
@@ -142,20 +135,6 @@ h3 { font-size: var(--size-h3); }
   font-weight: 500;
 }
 
-/* The dark band: the hero photograph and the product cards on it keep the
-   room's colours in light mode too. */
-.room {
-  --ground: var(--room);
-  --surface: var(--room-surface);
-  --ink: var(--room-ink);
-  --ink-soft: var(--room-ink-soft);
-  --line: var(--room-line);
-  --accent: var(--room-accent);
-  --accent-ink: var(--room);
-  background: var(--room);
-  color: var(--room-ink);
-}
-
 :where(a, button, input, textarea, select, [tabindex]):focus-visible {
   outline: 2px solid var(--accent);
   outline-offset: 2px;
@@ -178,5 +157,4 @@ h3 { font-size: var(--size-h3); }
 @media (prefers-reduced-motion: reduce) {
   .rise { animation: none; }
   .reveal, .reveal[data-shown="true"] { opacity: 1; transform: none; transition: none; }
-  * { scroll-behavior: auto !important; }
 }
