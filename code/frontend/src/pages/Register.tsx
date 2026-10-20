@@ -13,7 +13,7 @@ export default function Register() {
   const benefits = useList<{ icon: IconName; title: string; body: string }>("auth.benefits");
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
-  const input = "w-full border border-line bg-ground px-4 py-3 text-ink";
+  const input = "w-full bg-ground px-4 py-3 text-ink";
 
   function submit(e: FormEvent<HTMLFormElement>) {
     e.preventDefault();
