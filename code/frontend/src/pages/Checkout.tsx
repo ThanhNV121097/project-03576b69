@@ -26,7 +26,7 @@ export default function Checkout() {
   const demo = useDemo();
   const session = useSession();
   const real = useCart();
-  const lines = demo && real.length === 0 ? exampleLines : real;
+  const lines = demo && real.length === 0 ? exampleLines() : real;
   const { subtotal, shipping, total } = cartTotals(lines);
   const methods = useList<{ icon: IconName; label: string }>("checkout.methods");
   const [paying, setPaying] = useState(false);
