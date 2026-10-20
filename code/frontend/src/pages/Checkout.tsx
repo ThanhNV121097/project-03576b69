@@ -81,7 +81,7 @@ export default function Checkout() {
           <div className="flex flex-col gap-4">
             <label className="flex flex-col gap-2 text-sm">
               <T k="checkout.cardName" className="label text-ink-soft" />
-              <input id="card-name" name="card-name" autoComplete="cc-name" required className="w-full border border-line bg-ground px-4 py-3 text-ink" />
+              <input id="card-name" name="card-name" autoComplete="cc-name" required className={textInput} />
             </label>
             <label className="flex flex-col gap-2 text-sm">
               <T k="checkout.cardNumber" className="label text-ink-soft" />
