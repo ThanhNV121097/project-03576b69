@@ -47,7 +47,7 @@ export default function Product() {
   }
 
   return (
-    <div data-record={`products:${item.id}`} className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-12)]">
+    <div className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-12)]">
       <Link to={`/shop/${item.category}`} data-testid="back-to-shelf"
         className="label inline-flex items-center gap-2 text-ink-soft transition-colors duration-[var(--duration-fast)] hover:text-ink">
         <Icon name="back" size={16} /><T k="product.backToShop" />
