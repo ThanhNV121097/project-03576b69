@@ -152,11 +152,9 @@ function Rest() {
           <Icon name="arrow" size={16} />
         </Link>
       </div>
-      <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-        {rest.map((p) => (
-          <li key={p.id}><ProductCard product={p} /></li>
-        ))}
-      </ul>
+      <Grid max={3} className="mt-8">
+        {rest.map((p) => <ProductCard key={p.id} product={p} />)}
+      </Grid>
     </Reveal>
   );
 }
