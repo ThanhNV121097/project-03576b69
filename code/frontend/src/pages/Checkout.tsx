@@ -1,6 +1,6 @@
 import { useState, type FormEvent } from "react";
 import { Link, useNavigate } from "react-router-dom";
-import { T, useContent, useList } from "../editable";
+import { T, useList } from "../editable";
 import { usePageMeta } from "../seo";
 import { formatPrice } from "../lib/format";
 import { useDemo } from "../lib/demo";
