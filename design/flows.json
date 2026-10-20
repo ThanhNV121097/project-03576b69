@@ -10,6 +10,11 @@
       { "action": "click", "selector": "[data-testid='cart-link']" },
       { "action": "expect", "selector": "[data-testid='cart-total']", "text": "349" },
       { "action": "click", "selector": "[data-testid='to-checkout']" },
+      { "action": "type", "selector": "#card-name", "value": "Dana Whitfield" },
+      { "action": "type", "selector": "#card-number", "value": "4242 4242 4242 4242" },
+      { "action": "type", "selector": "#card-expiry", "value": "04 / 29" },
+      { "action": "type", "selector": "#card-cvc", "value": "123" },
+      { "action": "type", "selector": "#receipt-email", "value": "dana@example.com" },
       { "action": "click", "selector": "[data-testid='pay']" },
       { "action": "expect", "selector": "[data-testid='order-confirmed']", "text": "paid" }
     ]
