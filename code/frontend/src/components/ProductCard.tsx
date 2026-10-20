@@ -29,9 +29,11 @@ export default function ProductCard({ product, testid, eager = false }: {
         eager={eager}
         className="transition-transform duration-[var(--duration-fast)] group-hover:scale-[1.02]"
       />
-      <div className="flex items-baseline justify-between gap-4">
+      {/* Name over price on a phone, where two columns squeeze both; side by
+          side on one baseline from 640px. */}
+      <div className="flex flex-col gap-1 sm:flex-row sm:items-baseline sm:justify-between sm:gap-4">
         <h3 className="font-display">{product.name}</h3>
-        <Price amount={product.price} was={product.oldPrice} className="shrink-0 text-right text-accent" />
+        <Price amount={product.price} was={product.oldPrice} className="shrink-0 text-accent sm:text-right" />
       </div>
       <p className="text-sm leading-relaxed text-ink-soft">{product.summary}</p>
     </Link>
