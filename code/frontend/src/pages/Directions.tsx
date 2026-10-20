@@ -173,7 +173,6 @@ export function DirectionTwo() {
 
 export function DirectionThree() {
   useFonts();
-  const band = LINES.slice(0, 4);
   return (
     <div className="dir d3">
       <div className="d3__split">
