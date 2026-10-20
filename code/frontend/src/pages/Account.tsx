@@ -74,6 +74,20 @@ export default function Account() {
 
       <section className="mt-14 flex flex-col gap-5 border-t border-line pt-8">
         <T k="account.help" as="p" className="max-w-[56ch] text-sm leading-relaxed text-ink-soft" />
+        <ul className="flex flex-wrap gap-x-8 gap-y-3 text-sm">
+          <li className="flex items-center gap-2">
+            <Icon name="phone" size={16} className="text-accent" />
+            <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} data-testid="account-phone" className="tabular hover:text-accent">{phone}</a>
+          </li>
+          <li className="flex items-center gap-2">
+            <Icon name="mail" size={16} className="text-accent" />
+            <a href={`mailto:${email}`} data-testid="account-email-link" className="hover:text-accent">{email}</a>
+          </li>
+        </ul>
+        <ul className="flex flex-col gap-3 text-sm text-ink-soft">
+          <li className="flex items-start gap-3"><Icon name="returns" size={16} className="mt-[2px] text-accent" /><T k="product.returns" /></li>
+          <li className="flex items-start gap-3"><Icon name="quality" size={16} className="mt-[2px] text-accent" /><T k="product.warranty" /></li>
+        </ul>
         <button type="button" onClick={signOut} data-testid="sign-out"
           className="label inline-flex w-fit items-center gap-2 border border-line px-7 py-4 text-ink transition-colors duration-[var(--duration-fast)] hover:border-accent">
           <Icon name="logout" size={16} /><T k="account.signOut" />
