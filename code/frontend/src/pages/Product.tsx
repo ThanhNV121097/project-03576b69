@@ -24,6 +24,8 @@ export default function Product() {
   const [quantity, setQuantity] = useState(1);
   const [added, setAdded] = useState(false);
   const stockLeft = useContent<string>("product.stockLeft");
+  const lessLabel = useContent<string>("product.less");
+  const moreLabel = useContent<string>("product.more");
 
   const { items: siblings } = useCollection<ProductRow>("products", item ? { where: { category: item.category }, pageSize: 12 } : { pageSize: 1 });
   const { items: reviews } = useCollection<Review>("reviews", item ? { where: { product: item.id }, pageSize: 4 } : { pageSize: 1 });
