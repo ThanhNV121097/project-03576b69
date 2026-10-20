@@ -1,56 +1,216 @@
 {
   "site": {
-    "name": "Your business",
+    "name": "Loop Audio",
     "logo": "",
-    "description": "One sentence on what the business is, for search results and shared links.",
-    "locale": "vi-VN",
-    "defaultMode": "system"
+    "description": "Loop Audio is a small San Francisco shop for headphones, speakers and the accessories that keep them working. Free US shipping over $75.",
+    "locale": "en-US",
+    "defaultMode": "system",
+    "street": "Loop Audio · 1142 Folsom Street"
   },
   "nav": {
     "links": [
-      {
-        "label": "Home",
-        "href": "/"
-      }
+      { "label": "Shop", "href": "/shop" },
+      { "label": "Headphones", "href": "/shop/headphones" },
+      { "label": "Speakers", "href": "/shop/speakers" },
+      { "label": "Accessories", "href": "/shop/accessories" },
+      { "label": "Help", "href": "/help" },
+      { "label": "Contact", "href": "/contact" }
     ],
-    "cta": {
-      "label": "Get in touch",
-      "href": "#contact"
-    },
-    "theme": {
-      "toLight": "Switch to light mode",
-      "toDark": "Switch to dark mode"
-    },
-    "menu": {
-      "open": "Open menu",
-      "close": "Close menu"
-    }
+    "cta": { "label": "Shop all", "href": "/shop" },
+    "theme": { "toLight": "Switch to light mode", "toDark": "Switch to dark mode" },
+    "menu": { "open": "Open menu", "close": "Close menu" },
+    "cart": "Cart",
+    "account": "Your account",
+    "signIn": "Sign in",
+    "signOut": "Sign out"
   },
   "hero": {
-    "eyebrow": "",
-    "headline": "A headline of a few words",
-    "sub": "One line under it, and no more.",
-    "cta": {
-      "label": "Get in touch",
-      "href": "#contact"
+    "eyebrow": "Showroom and online, since 2019",
+    "headline": "Hear the room before you buy the pair",
+    "sub": "Twelve things we can stand behind, two own ranges, and a room on Folsom Street where you can listen to all of them.",
+    "cta": { "label": "Shop all twelve", "href": "/shop" },
+    "secondary": { "label": "Visit the showroom", "href": "/contact" },
+    "featuredLabel": "Picked this week"
+  },
+  "home": {
+    "categories": {
+      "label": "Three shelves",
+      "heading": "What we sell",
+      "sub": "Four pairs of headphones, four speakers, four accessories. Nothing we have not listened to."
+    },
+    "promises": {
+      "label": "How we ship",
+      "items": [
+        { "icon": "shipping", "title": "Free US shipping over $75", "body": "Flat $9 under that. Two to five business days anywhere in the US." },
+        { "icon": "returns", "title": "Thirty days to change your mind", "body": "Used or not, as long as you have the box. We pay the return shipping." },
+        { "icon": "quality", "title": "Two years of warranty", "body": "Three on the Loop-branded range. Keep the order number; that is all we ask for." },
+        { "icon": "secure", "title": "Stripe takes the payment", "body": "Card details never touch our servers." }
+      ]
+    },
+    "reviews": {
+      "label": "What customers say",
+      "heading": "Four people who bought from us"
+    },
+    "showroom": {
+      "label": "The room",
+      "heading": "Come and listen on Folsom Street",
+      "body": "Everything on this site is set up in the showroom. Bring the music you know best; the Harbour 500 is wired and waiting.",
+      "cta": { "label": "Opening hours and directions", "href": "/contact" }
     }
   },
-  "footer": {
-    "line": "Your business · District 1, Saigon"
+  "shop": {
+    "label": "The catalogue",
+    "heading": "Everything we sell",
+    "sub": "Twelve things across three shelves. Narrow it, or read the lot.",
+    "all": "All",
+    "countOne": "product",
+    "countMany": "products",
+    "showMore": "Show more",
+    "loading": "Loading…",
+    "empty": "Nothing on this shelf yet.",
+    "sortLabel": "Sort by",
+    "sort": {
+      "default": "What we recommend",
+      "priceUp": "Price, low to high",
+      "priceDown": "Price, high to low"
+    }
   },
-  "credits": {
-    "label": "Photos"
+  "product": {
+    "add": "Add to cart",
+    "added": "Added to cart",
+    "soldOut": "Sold out",
+    "stockLeft": "left in stock",
+    "specs": "Specifications",
+    "about": "What it is",
+    "quantity": "Quantity",
+    "less": "One fewer",
+    "more": "One more",
+    "was": "Was",
+    "related": "From the same shelf",
+    "reviews": "What customers say about it",
+    "backToShop": "All products",
+    "shipping": "Free US shipping over $75, two to five business days.",
+    "returns": "Thirty days to return it, used or not. We pay the postage.",
+    "warranty": "Two years of warranty; three on the Loop range."
+  },
+  "cart": {
+    "label": "Your cart",
+    "heading": "Your cart",
+    "empty": "Nothing in the cart yet.",
+    "emptyCta": { "label": "Browse the shop", "href": "/shop" },
+    "line": "Line",
+    "unit": "Each",
+    "quantity": "Quantity",
+    "lineTotal": "Line total",
+    "remove": "Remove this line",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "freeShipping": "Free",
+    "total": "Total",
+    "freeOver": "Free US shipping over $75.",
+    "checkout": "Checkout",
+    "keepShopping": "Keep shopping"
+  },
+  "checkout": {
+    "label": "Checkout",
+    "heading": "Pay for your order",
+    "summary": "Your order",
+    "subtotal": "Subtotal",
+    "shipping": "Shipping",
+    "total": "Total",
+    "payment": "Payment",
+    "paymentNote": "Card payments go through Stripe. Visa and Mastercard accepted, and Apple Pay on a device that has it.",
+    "methods": [
+      { "icon": "card", "label": "Visa or Mastercard" },
+      { "icon": "wallet", "label": "Apple Pay" }
+    ],
+    "cardNumber": "Card number",
+    "cardExpiry": "Expires",
+    "cardCvc": "Security code",
+    "cardName": "Name on the card",
+    "email": "Where to send the receipt",
+    "pay": "Pay now",
+    "paying": "Taking the payment…",
+    "after": "You will see your order number straight away and a receipt by email.",
+    "signInFirst": "Sign in to check out, so the order belongs to your account.",
+    "empty": "Nothing to pay for yet.",
+    "emptyCta": { "label": "Browse the shop", "href": "/shop" }
+  },
+  "order": {
+    "label": "Order",
+    "heading": "Your order is paid",
+    "sub": "A receipt is on its way to your email. We pack and ship in one business day.",
+    "number": "Order number",
+    "placed": "Placed",
+    "status": "Status",
+    "total": "Total",
+    "items": "What is in it",
+    "cta": { "label": "Your orders", "href": "/account" },
+    "shopCta": { "label": "Keep shopping", "href": "/shop" }
+  },
+  "account": {
+    "label": "Your account",
+    "heading": "Your account",
+    "signedInAs": "Signed in as",
+    "orders": "Your orders",
+    "noOrders": "No orders yet.",
+    "noOrdersCta": { "label": "Browse the shop", "href": "/shop" },
+    "orderNumber": "Order",
+    "placed": "Placed",
+    "status": "Status",
+    "total": "Total",
+    "signOut": "Sign out",
+    "help": "Something wrong with an order? Call or message us and quote the order number."
+  },
+  "auth": {
+    "signIn": {
+      "label": "Sign in",
+      "heading": "Sign in to Loop Audio",
+      "sub": "Your cart and your past orders belong to your account, so they are here on any device you sign in on.",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "noAccount": "No account yet?",
+      "register": "Create one"
+    },
+    "register": {
+      "label": "Create an account",
+      "heading": "Create an account",
+      "sub": "One account keeps your cart, your orders and your warranty records in one place.",
+      "name": "Your name",
+      "email": "Email",
+      "password": "Password",
+      "submit": "Create the account",
+      "haveAccount": "Already have one?",
+      "signIn": "Sign in"
+    },
+    "benefits": [
+      { "icon": "cart", "title": "Your cart follows you", "body": "Add a pair on a phone, pay for it on a laptop." },
+      { "icon": "package", "title": "Every order in one place", "body": "What you bought, when it shipped, what it cost." },
+      { "icon": "quality", "title": "Your warranty on record", "body": "Two years on everything, three on the Loop range." }
+    ]
+  },
+  "help": {
+    "label": "Help",
+    "heading": "Questions we are asked most",
+    "sub": "If the answer is not here, call the shop or send a message.",
+    "waiting": "The owner has not answered this one yet.",
+    "contactCta": { "label": "Ask us instead", "href": "/contact" }
   },
   "contact": {
-    "phone": "",
+    "phone": "+1 415 555 0142",
     "zalo": "",
-    "email": "",
+    "email": "hello@loopaudio.com",
     "address": "",
     "hours": "",
-    "dock": {
-      "call": "Call us",
-      "zalo": "Message us on Zalo"
-    },
+    "label": "Contact",
+    "heading": "Call the shop, or send a message",
+    "sub": "We answer the phone during showroom hours and read messages the same day.",
+    "callLabel": "Call us",
+    "mailLabel": "Email us",
+    "formHeading": "Send a message",
+    "formSub": "Tell us what you listen to and where you listen to it, and we will say which pair suits.",
+    "dock": { "call": "Call us", "zalo": "Message us" },
     "form": {
       "name": "Your name",
       "reply_to": "Phone or email",
@@ -60,6 +220,61 @@
       "sent": "Thank you — we have your message and will answer soon.",
       "offline": "This form is not connected yet — call or message us instead.",
       "fields": {}
+    }
+  },
+  "footer": {
+    "shop": "Shop",
+    "help": "Help",
+    "account": "Account",
+    "reach": "Reach us",
+    "rights": "Loop Audio, San Francisco. Founded 2019.",
+    "independent": "Loop and Harbour are our own ranges. Where we name another company's product or payment service, we are independent of it and not affiliated with it."
+  },
+  "credits": { "label": "Photos" },
+  "pages": {
+    "shop": {
+      "title": "Shop all twelve — Loop Audio",
+      "description": "Headphones, speakers and accessories, with prices and specifications. Free US shipping over $75."
+    },
+    "category": {
+      "title": "Shop by shelf — Loop Audio",
+      "description": "Headphones, speakers or accessories, each with its price and specifications."
+    },
+    "product": {
+      "title": "Product — Loop Audio",
+      "description": "Photographs, price, description and the full specifications, with an add-to-cart button."
+    },
+    "cart": {
+      "title": "Your cart — Loop Audio",
+      "description": "Change quantities, remove a line and see your total before you pay."
+    },
+    "checkout": {
+      "title": "Checkout — Loop Audio",
+      "description": "Pay by card through Stripe, or with Apple Pay on a device that has it."
+    },
+    "order": {
+      "title": "Your order — Loop Audio",
+      "description": "Your order number, what is in it and what it cost."
+    },
+    "account": {
+      "title": "Your account — Loop Audio",
+      "description": "Who is signed in, your past orders and the way out."
+    },
+    "signIn": {
+      "title": "Sign in — Loop Audio",
+      "description": "Sign in so your cart and your past orders follow you between devices."
+    },
+    "register": {
+      "title": "Create an account — Loop Audio",
+      "description": "One account keeps your cart, your orders and your warranty records together."
+    },
+    "help": {
+      "title": "Help — Loop Audio",
+      "description": "Payment, shipping, returns, warranty and the showroom on Folsom Street."
+    },
+    "contact": {
+      "title": "Contact — Loop Audio",
+      "description": "Call +1 415 555 0142, email hello@loopaudio.com, or send a message."
     }
   }
 }
