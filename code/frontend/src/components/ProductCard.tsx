@@ -29,7 +29,7 @@ export default function ProductCard({ product, testid, eager = false }: {
         eager={eager}
         className="transition-transform duration-[var(--duration-fast)] group-hover:scale-[1.02]"
       />
-      <div className="flex items-start justify-between gap-4">
+      <div className="flex items-baseline justify-between gap-4">
         <h3 className="font-display">{product.name}</h3>
         <Price amount={product.price} was={product.oldPrice} className="shrink-0 text-right text-accent" />
       </div>
