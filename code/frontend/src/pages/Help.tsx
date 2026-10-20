@@ -16,11 +16,16 @@ export default function Help() {
   const { items } = useCollection<Question>("faq", { pageSize: 10 });
   return (
     <div className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-16)]">
+      {/* The questions and the two ways to reach the shop side by side, so the
+          first screen's right half carries the phone and the email rather than
+          nothing. */}
+      <div className="grid gap-10 lg:grid-cols-[1fr_300px] lg:gap-16">
+        <div>
       <T k="help.label" as="p" className="label text-ink-soft" />
       <T k="help.heading" as="h1" className="mt-3" />
       <T k="help.sub" as="p" className="mt-5 max-w-[52ch] text-ink-soft" />
 
-      <dl className="mt-12 max-w-[72ch] border-t border-line">
+      <dl className="mt-12 border-t border-line">
         {items.map((q, i) => (
           <Reveal key={q.id} delay={Math.min(i, 6) * 40}>
             <div data-record={`faq:${q.id}`} data-testid={`faq-${q.id}`}
