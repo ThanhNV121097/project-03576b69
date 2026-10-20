@@ -1,0 +1,5 @@
+# The owner's data
+
+What the owner of this business uploaded with their brief. It is the truth about the business: names, prices, products, menus, opening hours and pictures come from here before anything is invented. The originals are kept as uploaded; spreadsheets and Word files are also written out as text beside them.
+
+- data/owner/loop-audio-catalogue.xlsx, data/owner/loop-audio-catalogue.xlsx.business-info.csv, data/owner/loop-audio-catalogue.xlsx.products-services.csv, data/owner/loop-audio-catalogue.xlsx.categories.csv, data/owner/loop-audio-catalogue.xlsx.faq.csv, data/owner/loop-audio-catalogue.xlsx.testimonials.csv — a spreadsheet, each sheet also as CSV — sheet "Business info", 14 rows, columns: Field,Value; sheet "Products & services", 13 rows, columns: Name,Type,Category,Price (USD),Old price (USD),Unit or duration,Short description,Details,Image file,Featured,Available; sheet "Categories", 4 rows, columns: Name,Description,Image file; sheet "FAQ", 7 rows, columns: Question,Answer; sheet "Testimonials", 5 rows, columns: Name,From,Quote,Rating
