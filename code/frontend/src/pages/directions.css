@@ -298,7 +298,7 @@
   display: grid;
   grid-template-columns: 1fr 596px;
   flex: 1;
-  min-height: 556px;
+  min-height: 520px;
 }
 .d3__words { padding: 54px 48px 40px 64px; display: flex; flex-direction: column; }
 .d3__label {
