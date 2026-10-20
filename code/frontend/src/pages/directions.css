@@ -55,7 +55,7 @@
   display: grid;
   grid-template-columns: 1fr 486px;
   gap: 72px;
-  padding-top: 42px;
+  padding: 34px 0 30px;
 }
 .d1 h1 {
   font: 500 44px/1.05 "Space Grotesk", Inter, sans-serif;
