@@ -47,8 +47,9 @@ Six photographs are shared by the three screens, and no photograph appears twice
 | `loop-studio-pro.jpg` | Loop Studio Pro | 1:1 cut-out tile | 3:2 cut-out on a pale tile | — |
 | `loop-air-2.jpg` | Loop Air 2 | 1:1 cut-out tile | 3:2 cut-out on a pale tile | — |
 | `studio-wide.jpg` | the listening room | — | 16:7 full-bleed hero, focal 32% 46%, darkened to 0.52 | — |
+| `speaker-macro.jpg` | a driver, close up | — | 29:40 portrait slice over the hero's lower right, focal 54% 46% | — |
 | `desk-flatlay.jpg` | the shop, as a scene | — | — | 23:32 portrait, filling the right half, focal 62% 38% |
-| `speaker-macro.jpg` | the speaker band | — | — | 32:5 full-bleed band, focal 50% 40%, darkened to 0.46 |
+| `turntable-close.jpg` | the price band | — | — | 32:5 full-bleed band, focal 44% 58%, darkened to 0.40 |
 
 Only the three pairs of headphones have an honest photograph of their own, so only those three are ever shown as a card with a picture, and no photograph carries two names. The speakers and the accessories appear as priced lines of type — no slot is filled with a picture of something else, and no rectangle is hand-drawn where a picture is missing. Direction 3 shows no product card at all: one scene of the shop, a price range over it, and the speakers as a band of priced type. The owner's own product photography replaces all six files.
 
