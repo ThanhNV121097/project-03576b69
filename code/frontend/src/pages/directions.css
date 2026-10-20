@@ -194,8 +194,8 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: 46% 52%; /* the record and the tonearm stay in frame */
-  filter: brightness(0.82) saturate(0.85);
+  object-position: 54% 46%; /* the cone and its surround stay in frame */
+  filter: brightness(0.86) saturate(0.7);
 }
 .d2__rail {
   position: absolute;
