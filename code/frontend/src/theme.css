@@ -12,22 +12,26 @@
  */
 
 :root {
-  /* colour — the owner's approved palette, exactly */
-  --ground: #0B0B0C;
-  --surface: #15161A;
-  --ink: #F2F0ED;
-  --ink-soft: #9A9790;
-  --line: #2A2B30;
-  --accent: #E8A33D;
-  --accent-ink: #0B0B0C;
+  /* colour, light: the same room by day — the owner's seven read on paper,
+     with the amber darkened to #A1631A so it carries 4.5:1 on this ground */
+  --ground: #F4F2EF;
+  --surface: #FFFFFF;
+  --ink: #15161A;
+  --ink-soft: #5D5A54;
+  --line: #DCD7CF;
+  --accent: #A1631A;
+  --accent-ink: #FFFFFF;
 
   /* a field's edge: --line is a hairline between blocks and disappears
      against the ground, but a reader has to see where to type */
-  --field-line: #5B5C64;
+  --field-line: #8B867D;
 
   /* the lit panel a cut-out product sits on — light in both modes, because a
      black or silver product cut out onto a dark ground loses its shading */
   --product-ground: #E6E3DD;
+
+  /* the ink on that panel, dark in both modes: it is a light tile */
+  --product-ink: #3A3833;
 
   /* typography */
   --font-display: "Syne", "Inter", system-ui, sans-serif;
