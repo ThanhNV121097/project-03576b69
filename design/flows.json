@@ -1,0 +1,57 @@
+[
+  {
+    "name": "Buy a pair of headphones",
+    "auth": true,
+    "steps": [
+      { "action": "open", "path": "/" },
+      { "action": "click", "selector": "[data-testid='featured-loop-one-wireless']" },
+      { "action": "expect", "selector": "[data-testid='product-price']", "text": "349" },
+      { "action": "click", "selector": "[data-testid='add-to-cart']" },
+      { "action": "click", "selector": "[data-testid='cart-link']" },
+      { "action": "expect", "selector": "[data-testid='cart-total']", "text": "349" },
+      { "action": "click", "selector": "[data-testid='to-checkout']" },
+      { "action": "click", "selector": "[data-testid='pay']" },
+      { "action": "expect", "selector": "[data-testid='order-confirmed']", "text": "paid" }
+    ]
+  },
+  {
+    "name": "Change a quantity in the cart",
+    "steps": [
+      { "action": "open", "path": "/product/harbour-mini" },
+      { "action": "click", "selector": "[data-testid='add-to-cart']" },
+      { "action": "click", "selector": "[data-testid='cart-link']" },
+      { "action": "click", "selector": "[data-testid='line-plus-harbour-mini']" },
+      { "action": "expect", "selector": "[data-testid='cart-total']", "text": "658" }
+    ]
+  },
+  {
+    "name": "Narrow the shop to speakers",
+    "steps": [
+      { "action": "open", "path": "/shop" },
+      { "action": "click", "selector": "[data-testid='filter-speakers']" },
+      { "action": "expect", "selector": "[data-testid='shop-count']", "text": "4" }
+    ]
+  },
+  {
+    "name": "Create an account",
+    "steps": [
+      { "action": "open", "path": "/register" },
+      { "action": "type", "selector": "#register-name", "value": "Dana Whitfield" },
+      { "action": "type", "selector": "#register-email", "value": "dana@example.com" },
+      { "action": "type", "selector": "#register-password", "value": "listening-room" },
+      { "action": "click", "selector": "[data-testid='register-submit']" },
+      { "action": "expect", "selector": "[data-testid='account-email']", "text": "dana@example.com" }
+    ]
+  },
+  {
+    "name": "Send the shop a message",
+    "steps": [
+      { "action": "open", "path": "/contact" },
+      { "action": "expect", "selector": "[data-testid='contact-phone']", "text": "+1 415 555 0142" },
+      { "action": "type", "selector": "#name", "value": "Dana Whitfield" },
+      { "action": "type", "selector": "#reply_to", "value": "dana@example.com" },
+      { "action": "type", "selector": "#message", "value": "Which pair suits a small room?" },
+      { "action": "expect", "selector": "[data-testid='contact-form']", "text": "Send" }
+    ]
+  }
+]
