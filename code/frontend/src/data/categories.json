@@ -1,0 +1,23 @@
+[
+  {
+    "id": "headphones",
+    "name": "Headphones",
+    "description": "Over-ear, in-ear and open-back, from running buds to a mixing pair.",
+    "image": "/images/product-loop-one-wireless.png",
+    "_source": "owner"
+  },
+  {
+    "id": "speakers",
+    "name": "Speakers",
+    "description": "Bookshelf, portable and floorstanding, all powered and ready to play.",
+    "image": "/images/products-harbour-200.png",
+    "_source": "owner"
+  },
+  {
+    "id": "accessories",
+    "name": "Accessories",
+    "description": "The DAC, cables, pads and stands that keep the rest working.",
+    "image": "/images/product-tether-dac.png",
+    "_source": "owner"
+  }
+]
