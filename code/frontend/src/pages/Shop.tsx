@@ -3,6 +3,7 @@ import { T } from "../editable";
 import { useCollection } from "../data";
 import { usePageMeta } from "../seo";
 import Icon from "../components/Icon";
+import Grid from "../components/Grid";
 import ProductCard from "../components/ProductCard";
 import Reveal from "../components/Reveal";
 import ShopRail, { type Sort } from "../components/ShopRail";
