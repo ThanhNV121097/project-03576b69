@@ -55,18 +55,19 @@ export default function ContactForm({ fields = [], className = "" }: { fields?: 
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
       {state === "failed" && <p role="alert" className="text-sm text-ink">{problem}</p>}
       {!canSend && <p className="text-sm text-ink-soft">{offline}</p>}
-      <button type="submit" disabled={state === "sending"} className="self-start rounded bg-accent px-6 py-3 text-accent-ink disabled:opacity-60">
+      <button type="submit" data-testid="contact-send" disabled={state === "sending"}
+        className="label self-start rounded bg-accent px-7 py-4 text-accent-ink transition-opacity duration-[var(--duration-fast)] hover:opacity-85 disabled:opacity-60">
         <T k={state === "sending" ? "contact.form.sending" : "contact.form.send"} />
       </button>
     </form>
   );
 }
 
-function Field({ k, children }: { k: string; children: ReactNode }) {
+function Field({ k, htmlFor, children }: { k: string; htmlFor?: string; children: ReactNode }) {
   return (
-    <label className="flex flex-col gap-2 text-sm">
-      <T k={`contact.form.${k}`} className="text-ink-soft" />
+    <div className="flex flex-col gap-2 text-sm">
+      <T k={`contact.form.${k}`} as="label" className="label text-ink-soft" {...(htmlFor ? { htmlFor } : {})} />
       {children}
-    </label>
+    </div>
   );
 }
