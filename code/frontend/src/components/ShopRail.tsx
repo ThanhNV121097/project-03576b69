@@ -47,7 +47,7 @@ export default function ShopRail({ categories, category, total, sort, onSort }: 
           {sortLabel}
         </span>
         <select id="shop-sort" value={sort} onChange={(e) => onSort(e.target.value as Sort)}
-          className="w-full border border-line bg-surface px-3 py-2 text-sm text-ink">
+          className="w-full bg-surface px-3 py-2 text-sm text-ink">
           <option value="default">{sortNames.default}</option>
           <option value="priceUp">{sortNames.priceUp}</option>
           <option value="priceDown">{sortNames.priceDown}</option>
