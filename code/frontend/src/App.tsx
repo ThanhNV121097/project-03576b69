@@ -21,6 +21,19 @@ import PhotoCredits from "./components/PhotoCredits";
  * <PhotoCredits/>: the stock photos' credits, which their licences ask for.
  */
 export default function App() {
+  // The direction screens render alone, outside this shell: they are a choice
+  // the owner makes, not pages of the site, and both files go when it is made.
+  return (
+    <Routes>
+      <Route path="/directions-1" element={<DirectionOne />} />
+      <Route path="/directions-2" element={<DirectionTwo />} />
+      <Route path="/directions-3" element={<DirectionThree />} />
+      <Route path="*" element={<Shell />} />
+    </Routes>
+  );
+}
+
+function Shell() {
   const links = useList<{ label: string; href: string }>("nav.links");
   const name = useContent("site.name");
   const [open, setOpen] = useState(false);
