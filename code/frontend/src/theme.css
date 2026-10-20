@@ -21,6 +21,10 @@
   --accent: #E8A33D;
   --accent-ink: #0B0B0C;
 
+  /* a field's edge: --line is a hairline between blocks and disappears
+     against the ground, but a reader has to see where to type */
+  --field-line: #5B5C64;
+
   /* the lit panel a cut-out product sits on — light in both modes, because a
      black or silver product cut out onto a dark ground loses its shading */
   --product-ground: #E6E3DD;
