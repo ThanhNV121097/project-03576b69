@@ -211,7 +211,7 @@ export function DirectionThree() {
         </div>
       </div>
       <div className="d3__band">
-        <img src="/images/studio-wide.jpg" alt="The listening room at Loop Audio" />
+        <img src="/images/speaker-macro.jpg" alt="A speaker driver, close up" />
         <div className="d3__band-inner">
           {band.map((l) => (
             <div className="d3__band-cell" key={l.name}>
