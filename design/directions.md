@@ -54,6 +54,8 @@ A seventh file, a desk flat-lay, was found and then deleted: another maker's lap
 
 Only the three pairs of headphones have an honest photograph of their own, so only those three are ever shown as a card with a picture, and no photograph carries two names. The speakers and the accessories appear as priced lines of type — no slot is filled with a picture of something else, and no rectangle is hand-drawn where a picture is missing. Direction 3 shows no product card at all: one scene of the shop, a price range over it, and the speakers as a band of priced type. The owner's own product photography replaces all six files.
 
+CHOSEN: Put the room in the picture — this shop closes a sale by showing a customer what good sounds like in a room before it talks about drivers, so the site opens on the listening room itself rather than on a spec sheet.
+
 ## Not used
 
 No reference site's identity is borrowed here: no competitor's palette, type pairing or arrangement. Every price, name, description, address, hour and policy on the three screens is the owner's own row from `data/owner/loop-audio-catalogue.xlsx`.
