@@ -56,7 +56,7 @@ function Hero({ featured }: { featured: Product[] }) {
       <div className="relative z-10 flex min-h-[calc(100svh-var(--header-h))] flex-col justify-between pt-[clamp(28px,6vh,64px)]">
         {/* The headline over the photograph's left third, running off the right edge. */}
         <div className="mx-auto w-full max-w-page px-[var(--gutter)]">
-          <div className="max-w-[60%] lg:max-w-[46%]">
+          <div className="max-w-full sm:max-w-[72%] lg:max-w-[46%]">
             <T k="hero.eyebrow" as="p" className="label rise text-accent" />
             {/* The bleed is the direction's one clipped line, and it needs a
                 left third to be set over: from 1024px the headline runs off
