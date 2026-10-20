@@ -201,11 +201,11 @@ export function DirectionThree() {
           </div>
         </div>
         <div className="d3__stage">
-          <img src="/images/loop-one-wireless.jpg" alt="Loop One Wireless" />
+          <img src="/images/desk-flatlay.jpg" alt="A desk set up for listening at Loop Audio" />
           <div className="d3__price">
-            <div className="d3__price-name">Loop One Wireless</div>
+            <div className="d3__price-name">Twelve things, in stock</div>
             <div className="d3__price-fig dir__num">
-              $349<s>$399</s>
+              $39—1,890
             </div>
           </div>
         </div>
