@@ -103,6 +103,7 @@
   --accent: #E8A33D;
   --accent-ink: #050506;
   --product-ground: #DCD8D1;
+  --field-line: #55565E;
 }
 
 [data-theme="light"] {
