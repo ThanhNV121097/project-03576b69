@@ -233,47 +233,47 @@
   "credits": { "label": "Photos" },
   "pages": {
     "shop": {
-      "title": "Shop all twelve — Loop Audio",
+      "title": "Shop all twelve",
       "description": "Headphones, speakers and accessories, with prices and specifications. Free US shipping over $75."
     },
     "category": {
-      "title": "Shop by shelf — Loop Audio",
+      "title": "Shop by shelf",
       "description": "Headphones, speakers or accessories, each with its price and specifications."
     },
     "product": {
-      "title": "Product — Loop Audio",
+      "title": "Product",
       "description": "Photographs, price, description and the full specifications, with an add-to-cart button."
     },
     "cart": {
-      "title": "Your cart — Loop Audio",
+      "title": "Your cart",
       "description": "Change quantities, remove a line and see your total before you pay."
     },
     "checkout": {
-      "title": "Checkout — Loop Audio",
+      "title": "Checkout",
       "description": "Pay by card through Stripe, or with Apple Pay on a device that has it."
     },
     "order": {
-      "title": "Your order — Loop Audio",
+      "title": "Your order",
       "description": "Your order number, what is in it and what it cost."
     },
     "account": {
-      "title": "Your account — Loop Audio",
+      "title": "Your account",
       "description": "Who is signed in, your past orders and the way out."
     },
     "signIn": {
-      "title": "Sign in — Loop Audio",
+      "title": "Sign in",
       "description": "Sign in so your cart and your past orders follow you between devices."
     },
     "register": {
-      "title": "Create an account — Loop Audio",
+      "title": "Create an account",
       "description": "One account keeps your cart, your orders and your warranty records together."
     },
     "help": {
-      "title": "Help — Loop Audio",
+      "title": "Help",
       "description": "Payment, shipping, returns, warranty and the showroom on Folsom Street."
     },
     "contact": {
-      "title": "Contact — Loop Audio",
+      "title": "Contact",
       "description": "Call +1 415 555 0142, email hello@loopaudio.com, or send a message."
     }
   }
