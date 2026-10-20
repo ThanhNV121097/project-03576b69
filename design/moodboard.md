@@ -47,21 +47,11 @@ window in it, and it is what keeps every product its photograph.
 
 ## COMMITMENTS
 
-1. The home page's first screen is one dark photograph of a listening room, full-bleed from edge
-   to edge of the viewport, filling the top two thirds; no container, no margin around it.
-2. The h1 is set over the photograph's left third and its last word runs off the right edge of
-   the viewport — clipped, not wrapped.
-3. `Loop Audio · 1142 Folsom Street` is set vertically, bottom-to-top, up the left margin of the
-   hero, 11px at 0.22em tracking, as the counterweight to the bleeding headline.
-4. Three featured products sit on dark cards across the bottom third of that same first screen,
-   each with a cut-out picture on a pale panel, a name, and a price in amber — all four elements
-   in view at 1440×790 without scrolling.
-5. Every price on the site is tabular, right-aligned in any column of prices, and set at 24px or
-   larger on a product card and a product page.
-6. The shop page is a two-column asymmetric grid: a sticky-free category rail on the left at
-   1024px and up, products on the right, never three equal columns of white cards.
-7. The product page's first screen carries the large picture, the name, the price and the
-   add-to-cart button together, with the spec table further down as a hairline-ruled two-column
-   table.
-8. One accent only — amber `#E8A33D` — on prices, primary buttons and focus rings; nothing else
-   on the site is coloured.
+- The home page's first screen is one dark photograph of a listening room, full-bleed from edge to edge of the viewport, filling the top two thirds; no container, no margin around it.
+- The h1 is set over the photograph's left third and its last word runs off the right edge of the viewport — clipped, not wrapped.
+- `Loop Audio · 1142 Folsom Street` is set vertically, bottom-to-top, up the left margin of the hero, 11px at 0.22em tracking, as the counterweight to the bleeding headline.
+- Three featured products sit on dark cards across the bottom third of that same first screen, each with a cut-out picture on a pale panel, a name, and a price in amber — all four in view at 1440×790 without scrolling.
+- Every price on the site is tabular, right-aligned in any column of prices, and set at 24px or larger on a product card and a product page.
+- The shop page is a two-column asymmetric grid: a category rail on the left at 1024px and up, products on the right, never three equal columns of white cards.
+- The product page's first screen carries the large picture, the name, the price and the add-to-cart button together, with the spec table further down as a hairline-ruled two-column table.
+- One accent only — amber `#E8A33D` — on prices, primary buttons and focus rings; nothing else on the site is coloured.
