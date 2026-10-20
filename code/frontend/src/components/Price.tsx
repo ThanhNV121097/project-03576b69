@@ -12,7 +12,7 @@ export default function Price({ amount, was, size = "md", className = "" }: {
 }) {
   const fontSize = size === "lg" ? "var(--size-price-lg)" : "var(--size-price)";
   return (
-    <span className={`tabular inline-flex items-baseline gap-2 font-display ${className}`}>
+    <span className={`tabular inline-flex max-w-full flex-wrap items-baseline gap-x-2 font-display ${className}`}>
       <span style={{ fontSize }}>{formatPrice(amount)}</span>
       {was && was > amount ? (
         <s className="tabular text-sm font-normal text-ink-soft">{formatPrice(was)}</s>
