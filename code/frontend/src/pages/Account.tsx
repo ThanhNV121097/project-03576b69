@@ -21,6 +21,8 @@ export default function Account() {
   const session = useSession();
   const { items: past } = useCollection<OrderRow>("orders", { pageSize: 10 });
   const mine = paidOrders();
+  const phone = useContent<string>("contact.phone");
+  const email = useContent<string>("contact.email");
   const orders: OrderRow[] = [...mine, ...past.filter((p) => !mine.some((m) => m.id === p.id))];
 
   if (!session && !demo) return <SignInPanel noteKey="auth.signIn.sub" />;
