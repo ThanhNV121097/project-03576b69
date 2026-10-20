@@ -63,11 +63,11 @@ export default function ContactForm({ fields = [], className = "" }: { fields?: 
   );
 }
 
-function Field({ k, htmlFor, children }: { k: string; htmlFor?: string; children: ReactNode }) {
+function Field({ k, children }: { k: string; children: ReactNode }) {
   return (
-    <div className="flex flex-col gap-2 text-sm">
-      <T k={`contact.form.${k}`} as="label" className="label text-ink-soft" {...(htmlFor ? { htmlFor } : {})} />
+    <label className="flex flex-col gap-2 text-sm">
+      <T k={`contact.form.${k}`} className="label text-ink-soft" />
       {children}
-    </div>
+    </label>
   );
 }
