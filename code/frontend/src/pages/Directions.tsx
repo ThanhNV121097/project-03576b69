@@ -204,7 +204,7 @@ export function DirectionThree() {
           </div>
         </div>
         <div className="d3__stage">
-          <img src="/images/desk-flatlay.jpg" alt="A desk set up for listening at Loop Audio" />
+          <img src="/images/turntable-close.jpg" alt="A record playing in the Folsom Street showroom" />
           <div className="d3__price">
             <div className="d3__price-name">Twelve things, in stock</div>
             <div className="d3__price-fig dir__num">
