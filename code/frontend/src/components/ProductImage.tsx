@@ -46,8 +46,15 @@ export default function ProductImage({ src, alt, aspect = "1/1", slot, caption, 
           loading={eager ? "eager" : "lazy"}
           className="absolute inset-[8%] h-[84%] w-[84%] object-contain" />
       ) : (
-        <Picture src={slot ?? ""} alt={alt} caption={caption} fit="contain"
-          className="absolute inset-0 h-full w-full" />
+        /* No photograph of THIS product yet: the flat block with its caption,
+           carrying the slot the owner drops their own picture onto. The slot
+           path is never an <img src> — the file is not there, and a browser
+           that asks for it reads as this product borrowing a neighbour's
+           picture until it fails. */
+        <div data-picture={slot || undefined} data-fit="contain" role="img" aria-label={alt}
+          className="absolute inset-0 flex h-full w-full items-end bg-surface text-ink-soft">
+          <span className="p-4 text-sm">{caption ?? alt}</span>
+        </div>
       )}
     </div>
   );
