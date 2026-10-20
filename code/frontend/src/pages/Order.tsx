@@ -1,3 +1,4 @@
+import type { ReactNode } from "react";
 import { Link, useParams } from "react-router-dom";
 import { T } from "../editable";
 import { useRecord } from "../data";
