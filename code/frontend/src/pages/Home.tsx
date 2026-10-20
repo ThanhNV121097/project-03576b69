@@ -60,9 +60,9 @@ function Hero({ featured }: { featured: Product[] }) {
             <h1 className="rise mt-5 whitespace-nowrap" style={{ ["--rise-delay" as string]: "80ms" }}>
               <T k="hero.headline" />
             </h1>
-            <T k="hero.sub" as="p"
-              className="rise mt-5 max-w-[46ch] text-base leading-relaxed text-ink-soft md:text-lg"
-              style={{ ["--rise-delay" as string]: "160ms" }} />
+            <div className="rise" style={{ ["--rise-delay" as string]: "160ms" }}>
+              <T k="hero.sub" as="p" className="mt-5 max-w-[46ch] text-base leading-relaxed text-ink-soft md:text-lg" />
+            </div>
             <div className="rise mt-7 flex flex-wrap items-center gap-3" style={{ ["--rise-delay" as string]: "240ms" }}>
               <Link to="/shop" data-testid="hero-shop"
                 className="label whitespace-nowrap bg-accent px-7 py-4 text-accent-ink transition-opacity duration-[var(--duration-fast)] hover:opacity-85">
