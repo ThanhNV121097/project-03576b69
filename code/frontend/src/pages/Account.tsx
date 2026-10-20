@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { T } from "../editable";
+import { T, useContent } from "../editable";
 import { useCollection } from "../data";
 import { usePageMeta } from "../seo";
 import { formatDate, formatPrice } from "../lib/format";
