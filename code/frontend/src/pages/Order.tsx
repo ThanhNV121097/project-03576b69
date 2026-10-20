@@ -53,7 +53,7 @@ export default function Order() {
   );
 }
 
-function Row({ label, children }: { label: string; children: React.ReactNode }) {
+function Row({ label, children }: { label: string; children: ReactNode }) {
   return (
     <div className="flex flex-wrap items-baseline justify-between gap-4 border-b border-line py-4">
       <T k={label} as="dt" className="label text-ink-soft" />
