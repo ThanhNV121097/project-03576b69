@@ -7,6 +7,7 @@ import Rating from "../components/Rating";
 import ProductImage from "../components/ProductImage";
 import Price from "../components/Price";
 import ProductCard from "../components/ProductCard";
+import Grid from "../components/Grid";
 import Reveal from "../components/Reveal";
 import type { Category, Product, Review } from "../lib/catalogue";
 
