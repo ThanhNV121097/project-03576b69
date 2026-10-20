@@ -45,6 +45,35 @@ export default function Help() {
         className="label mt-12 inline-flex items-center gap-2 bg-accent px-7 py-4 text-accent-ink transition-opacity duration-[var(--duration-fast)] hover:opacity-85">
         <Icon name="chat" size={16} /><T k="help.contactCta.label" />
       </Link>
+        </div>
+        <Reach />
+      </div>
     </div>
+  );
+}
+
+/** The two ways to reach the shop, beside the questions. */
+function Reach() {
+  const phone = useContent<string>("contact.phone");
+  const email = useContent<string>("contact.email");
+  return (
+    <aside className="flex h-fit flex-col gap-6 border-t border-line pt-8 lg:mt-[7.5rem]">
+      <T k="contact.label" as="p" className="label text-ink-soft" />
+      <div className="flex items-start gap-3">
+        <Icon name="phone" size={18} className="mt-1 text-accent" />
+        <div>
+          <T k="contact.callLabel" as="p" className="label text-ink-soft" />
+          <a href={`tel:${phone.replace(/[^+\d]/g, "")}`} data-testid="help-phone"
+            className="tabular mt-1 block font-display hover:text-accent">{phone}</a>
+        </div>
+      </div>
+      <div className="flex items-start gap-3">
+        <Icon name="mail" size={18} className="mt-1 text-accent" />
+        <div>
+          <T k="contact.mailLabel" as="p" className="label text-ink-soft" />
+          <a href={`mailto:${email}`} data-testid="help-email" className="mt-1 block font-display hover:text-accent">{email}</a>
+        </div>
+      </div>
+    </aside>
   );
 }
