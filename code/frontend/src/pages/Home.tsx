@@ -58,7 +58,10 @@ function Hero({ featured }: { featured: Product[] }) {
         <div className="mx-auto w-full max-w-page px-[var(--gutter)]">
           <div className="max-w-[60%] lg:max-w-[46%]">
             <T k="hero.eyebrow" as="p" className="label rise text-accent" />
-            <h1 className="rise mt-5 whitespace-nowrap" style={{ ["--rise-delay" as string]: "80ms" }}>
+            {/* The bleed is the direction's one clipped line, and it needs a
+                left third to be set over: from 1024px the headline runs off
+                the right edge, below that it wraps and the sentence is whole. */}
+            <h1 className="rise mt-5 lg:whitespace-nowrap" style={{ ["--rise-delay" as string]: "80ms" }}>
               <T k="hero.headline" />
             </h1>
             <div className="rise" style={{ ["--rise-delay" as string]: "160ms" }}>
