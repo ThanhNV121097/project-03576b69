@@ -75,7 +75,7 @@ export default function Product() {
 
           <div className="mt-7 flex flex-wrap items-center gap-4">
             <div className="flex items-center border border-line">
-              <button type="button" aria-label={useContent<string>("product.less")} data-testid="quantity-minus"
+              <button type="button" aria-label={lessLabel} data-testid="quantity-minus"
                 onClick={() => setQuantity((q) => Math.max(1, q - 1))}
                 className="grid h-12 w-12 place-items-center text-ink-soft transition-colors duration-[var(--duration-fast)] hover:text-accent">
                 <Icon name="minus" size={16} />
