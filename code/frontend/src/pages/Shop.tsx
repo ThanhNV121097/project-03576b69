@@ -36,6 +36,11 @@ export default function Shop() {
   const here = categories.find((c) => c.id === category);
   const allLabel = useContent<string>("shop.all");
   const sortLabel = useContent<string>("shop.sortLabel");
+  const sortNames: Record<Sort, string> = {
+    default: useContent<string>("shop.sort.default"),
+    priceUp: useContent<string>("shop.sort.priceUp"),
+    priceDown: useContent<string>("shop.sort.priceDown"),
+  };
 
   return (
     <div className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-16)]">
