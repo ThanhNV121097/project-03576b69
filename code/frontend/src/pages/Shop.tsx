@@ -49,13 +49,13 @@ export default function Shop() {
           {shown.length === 0 && !loading ? (
             <T k="shop.empty" as="p" className="text-ink-soft" />
           ) : (
-            <ul className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+            <Grid max={3}>
               {shown.map((p, i) => (
-                <Reveal as="li" key={p.id} delay={Math.min(i, 5) * 40}>
+                <Reveal key={p.id} delay={Math.min(i, 5) * 40}>
                   <ProductCard product={p} eager={i < 3} />
                 </Reveal>
               ))}
-            </ul>
+            </Grid>
           )}
           {loading && <T k="shop.loading" as="p" className="mt-8 text-sm text-ink-soft" />}
           {hasMore && !loading && (
