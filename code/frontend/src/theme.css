@@ -85,34 +85,22 @@
   :root { --dock-space: 88px; }
 }
 
-/* The lamp turned down: the same room, deeper. */
+/* The lamp turned down: the listening room at night, the owner's own seven. */
 @media (prefers-color-scheme: dark) {
-  :root {
-    --ground: #050506;
-    --surface: #101115;
-    --ink: #EDEAE4;
-    --ink-soft: #8C8982;
-    --line: #22232A;
+  :root:not([data-theme="light"]) {
+    --ground: #0B0B0C;
+    --surface: #15161A;
+    --ink: #F2F0ED;
+    --ink-soft: #9A9790;
+    --line: #2A2B30;
     --accent: #E8A33D;
-    --accent-ink: #050506;
-    --product-ground: #DCD8D1;
-    --field-line: #55565E;
+    --accent-ink: #0B0B0C;
+    --product-ground: #E6E3DD;
+    --field-line: #5B5C64;
   }
 }
 
 [data-theme="dark"] {
-  --ground: #050506;
-  --surface: #101115;
-  --ink: #EDEAE4;
-  --ink-soft: #8C8982;
-  --line: #22232A;
-  --accent: #E8A33D;
-  --accent-ink: #050506;
-  --product-ground: #DCD8D1;
-  --field-line: #55565E;
-}
-
-[data-theme="light"] {
   --ground: #0B0B0C;
   --surface: #15161A;
   --ink: #F2F0ED;
