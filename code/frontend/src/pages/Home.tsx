@@ -15,7 +15,11 @@ import type { Category, Product, Review } from "../lib/catalogue";
  * photograph of the listening room full-bleed across the top two thirds, the
  * headline over its left third running off the right edge of the viewport,
  * the street set vertically up the left margin, and three featured products
- * on dark cards along the bottom — all in view at 1440×790.
+ * on dark tiles along the bottom — all in view at 1440×790.
+ *
+ * The hero and the showroom band carry the `room` class, which restates the
+ * seven palette tokens dark inside them (theme.css), so the band is the dark
+ * room in light mode too and nothing here needs a raw colour.
  */
 export default function Home() {
   const { items: featured } = useCollection<Product>("products", { where: { featured: true }, pageSize: 3 });
@@ -34,8 +38,8 @@ export default function Home() {
 function Hero({ featured }: { featured: Product[] }) {
   const street = useContent<string>("site.street");
   return (
-    <section className="relative isolate overflow-hidden bg-[#0B0B0C] text-[#F2F0ED]">
-      {/* The photograph, full-bleed, the top two thirds of the screen. */}
+    <section className="room relative isolate overflow-hidden">
+      {/* The photograph, full-bleed, across the top two thirds of the screen. */}
       <div className="absolute inset-x-0 top-0 h-[64%]">
         <Picture src="/images/studio-wide.jpg" alt="The listening room at 1142 Folsom Street"
           loading="eager" width={1600} height={900} className="h-full w-full object-cover opacity-[0.52]" />
@@ -43,29 +47,29 @@ function Hero({ featured }: { featured: Product[] }) {
 
       {/* The street, vertically up the left margin: the counterweight. */}
       <span aria-hidden="true"
-        className="label pointer-events-none absolute bottom-[38%] left-3 z-20 hidden text-[#9A9790] lg:block"
+        className="label pointer-events-none absolute bottom-[38%] left-3 z-20 hidden text-ink-soft lg:block"
         style={{ writingMode: "vertical-rl", transform: "rotate(180deg)" }}>
         {street}
       </span>
 
-      <div className="relative z-10 flex min-h-[calc(100svh-var(--header-h))] flex-col justify-between pt-[clamp(32px,7vh,72px)]">
+      <div className="relative z-10 flex min-h-[calc(100svh-var(--header-h))] flex-col justify-between pt-[clamp(28px,6vh,64px)]">
         {/* The headline over the photograph's left third, running off the right edge. */}
         <div className="mx-auto w-full max-w-page px-[var(--gutter)]">
-          <div className="max-w-[58%] min-[1200px]:max-w-[46%]">
-            <T k="hero.eyebrow" as="p" className="label rise text-[#E8A33D]" />
-            <h1 className="rise mt-5 whitespace-nowrap text-[#F2F0ED]" style={{ ["--rise-delay" as string]: "80ms" }}>
+          <div className="max-w-[60%] lg:max-w-[46%]">
+            <T k="hero.eyebrow" as="p" className="label rise text-accent" />
+            <h1 className="rise mt-5 whitespace-nowrap" style={{ ["--rise-delay" as string]: "80ms" }}>
               <T k="hero.headline" />
             </h1>
             <T k="hero.sub" as="p"
-              className="rise mt-5 max-w-[46ch] text-base leading-relaxed text-[#C9C6BF] md:text-lg"
+              className="rise mt-5 max-w-[46ch] text-base leading-relaxed text-ink-soft md:text-lg"
               style={{ ["--rise-delay" as string]: "160ms" }} />
             <div className="rise mt-7 flex flex-wrap items-center gap-3" style={{ ["--rise-delay" as string]: "240ms" }}>
               <Link to="/shop" data-testid="hero-shop"
-                className="label whitespace-nowrap bg-[#E8A33D] px-7 py-4 text-[#0B0B0C] transition-opacity duration-[var(--duration-fast)] hover:opacity-85">
+                className="label whitespace-nowrap bg-accent px-7 py-4 text-accent-ink transition-opacity duration-[var(--duration-fast)] hover:opacity-85">
                 <T k="hero.cta.label" />
               </Link>
               <Link to="/contact"
-                className="label whitespace-nowrap border border-[#2A2B30] px-7 py-4 text-[#F2F0ED] transition-colors duration-[var(--duration-fast)] hover:border-[#E8A33D]">
+                className="label whitespace-nowrap border border-line px-7 py-4 text-ink transition-colors duration-[var(--duration-fast)] hover:border-accent">
                 <T k="hero.secondary.label" />
               </Link>
             </div>
@@ -73,22 +77,22 @@ function Hero({ featured }: { featured: Product[] }) {
         </div>
 
         {/* Three featured products on dark tiles along the bottom of the screen. */}
-        <div className="mx-auto mt-[clamp(28px,5vh,56px)] w-full max-w-page px-[var(--gutter)] pb-[clamp(24px,4vh,48px)]">
-          <T k="hero.featuredLabel" as="p" className="label rise mb-4 text-[#9A9790]"
+        <div className="mx-auto mt-[clamp(24px,4vh,48px)] w-full max-w-page px-[var(--gutter)] pb-[clamp(20px,4vh,44px)]">
+          <T k="hero.featuredLabel" as="p" className="label rise mb-4 text-ink-soft"
             style={{ ["--rise-delay" as string]: "320ms" }} />
           <ul className="rise grid grid-cols-1 gap-3 sm:grid-cols-3" style={{ ["--rise-delay" as string]: "380ms" }}>
             {featured.map((p) => (
               <li key={p.id}>
                 <Link to={`/product/${p.id}`} data-record={`products:${p.id}`} data-testid={`featured-${p.id}`}
-                  className="group flex items-center gap-4 border border-[#2A2B30] bg-[#15161A] p-3 transition-colors duration-[var(--duration-fast)] hover:border-[#E8A33D]">
-                  <div className="w-[72px] shrink-0 sm:w-[84px]">
+                  className="group flex items-center gap-4 border border-line bg-surface p-3 transition-colors duration-[var(--duration-fast)] hover:border-accent">
+                  <div className="w-[72px] shrink-0 sm:w-[80px]">
                     <ProductImage src={p.image} alt={p.name} aspect="1/1" eager
                       slot={`/images/products/${p.id}.png`} caption={p.name}
                       className="transition-transform duration-[var(--duration-fast)] group-hover:scale-[1.03]" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-display text-[var(--size-h3)] text-[#F2F0ED]">{p.name}</p>
-                    <Price amount={p.price} was={p.oldPrice} className="mt-1 text-[#E8A33D]" />
+                    <p className="truncate font-display text-[var(--size-h3)]">{p.name}</p>
+                    <Price amount={p.price} was={p.oldPrice} className="mt-1 text-accent" />
                   </div>
                 </Link>
               </li>
@@ -191,10 +195,8 @@ function Reviews() {
           <li key={r.id} data-record={`reviews:${r.id}`}
             className="flex flex-col gap-4 border-t border-line pt-5">
             <Rating value={r.rating} />
-            <blockquote className="text-base leading-relaxed">{r.quote}</blockquote>
-            <p className="mt-auto text-sm text-ink-soft">
-              {r.name} · {r.from}
-            </p>
+            <blockquote className="leading-relaxed">{r.quote}</blockquote>
+            <p className="mt-auto text-sm text-ink-soft">{r.name} · {r.from}</p>
           </li>
         ))}
       </ul>
@@ -204,16 +206,16 @@ function Reviews() {
 
 function Showroom() {
   return (
-    <Reveal as="section" className="relative isolate overflow-hidden bg-[#0B0B0C] text-[#F2F0ED]">
+    <Reveal as="section" className="room relative isolate overflow-hidden">
       <Picture src="/images/turntable-close.jpg" alt="A record playing in the Loop Audio showroom"
         width={1200} height={900} className="absolute inset-0 h-full w-full object-cover opacity-40" />
       <div className="relative mx-auto max-w-page px-[var(--gutter)] py-[var(--space-24)]">
         <div className="max-w-[46ch]">
-          <T k="home.showroom.label" as="p" className="label text-[#E8A33D]" />
-          <T k="home.showroom.heading" as="h2" className="mt-3 text-[#F2F0ED]" />
-          <T k="home.showroom.body" as="p" className="mt-4 leading-relaxed text-[#C9C6BF]" />
+          <T k="home.showroom.label" as="p" className="label text-accent" />
+          <T k="home.showroom.heading" as="h2" className="mt-3" />
+          <T k="home.showroom.body" as="p" className="mt-4 leading-relaxed text-ink-soft" />
           <Link to="/contact" data-testid="showroom-contact"
-            className="label mt-7 inline-flex items-center gap-2 whitespace-nowrap border border-[#2A2B30] px-7 py-4 text-[#F2F0ED] transition-colors duration-[var(--duration-fast)] hover:border-[#E8A33D]">
+            className="label mt-7 inline-flex items-center gap-2 whitespace-nowrap border border-line px-7 py-4 text-ink transition-colors duration-[var(--duration-fast)] hover:border-accent">
             <Icon name="address" size={16} />
             <T k="home.showroom.cta.label" />
           </Link>
