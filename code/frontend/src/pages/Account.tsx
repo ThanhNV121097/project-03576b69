@@ -7,7 +7,6 @@ import { useDemo } from "../lib/demo";
 import { useSession, signOut } from "../lib/session";
 import { paidOrders } from "../lib/mock/orders";
 import Icon from "../components/Icon";
-import Price from "../components/Price";
 import SignInPanel from "../components/SignInPanel";
 import type { OrderRow } from "../lib/catalogue";
 
