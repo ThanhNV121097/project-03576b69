@@ -91,9 +91,23 @@ export function cartTotals(items: CartLine[]) {
   return { subtotal, shipping, total: subtotal + shipping, count: items.reduce((n, l) => n + l.quantity, 0) };
 }
 
-/** The three lines the Studio, the walk and the owner's preview are shown. */
-export const exampleLines: CartLine[] = [
-  { id: "loop-one-wireless", name: "Loop One Wireless", price: 349, image: "/images/products-loop-one-wireless.png", unit: "pair", quantity: 1 },
-  { id: "harbour-mini", name: "Harbour Mini", price: 329, image: "", unit: "each", quantity: 2 },
-  { id: "loop-cable-kit", name: "Loop Cable Kit", price: 59, image: "/images/product-loop-cable-kit.png", unit: "set", quantity: 1 },
+/**
+ * The three lines the Studio, the walk and the owner's preview are shown —
+ * read from the catalogue, so a name or a price the owner edits cannot
+ * diverge from the cart. Their ids and quantities are all this file decides.
+ */
+const EXAMPLE: { id: string; quantity: number }[] = [
+  { id: "loop-one-wireless", quantity: 1 },
+  { id: "harbour-mini", quantity: 2 },
+  { id: "loop-cable-kit", quantity: 1 },
 ];
+
+export function exampleLines(): CartLine[] {
+  const products = collections().products ?? [];
+  return EXAMPLE.flatMap(({ id, quantity }) => {
+    const p = products.find((row) => row.id === id);
+    return p
+      ? [{ id, name: String(p.name), price: Number(p.price), image: String(p.image ?? ""), unit: String(p.unit ?? ""), quantity }]
+      : [];
+  });
+}
