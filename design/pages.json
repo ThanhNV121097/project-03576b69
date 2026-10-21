@@ -1,0 +1,14 @@
+[
+  { "path": "/", "name": "Home" },
+  { "path": "/shop", "name": "Shop" },
+  { "path": "/shop/:category", "name": "Category", "example": "/shop/headphones" },
+  { "path": "/product/:id", "name": "Product", "example": "/product/loop-one-wireless" },
+  { "path": "/cart", "name": "Cart" },
+  { "path": "/checkout", "name": "Checkout", "auth": true },
+  { "path": "/order/:id", "name": "Order", "example": "/order/la-2417", "auth": true },
+  { "path": "/account", "name": "Account", "auth": true },
+  { "path": "/sign-in", "name": "Sign in" },
+  { "path": "/register", "name": "Create an account" },
+  { "path": "/help", "name": "Help" },
+  { "path": "/contact", "name": "Contact" }
+]

@@ -1,0 +1,38 @@
+[
+  {
+    "id": "dana-whitfield",
+    "name": "Dana Whitfield",
+    "from": "Producer, Oakland",
+    "quote": "The Studio Pro is the first pair I have mixed on at home that translated to the car.",
+    "rating": 5,
+    "product": "loop-studio-pro",
+    "_source": "owner"
+  },
+  {
+    "id": "marcus-lee",
+    "name": "Marcus Lee",
+    "from": "Commuter, San Jose",
+    "quote": "Loop One on a full flight to Tokyo and I still had battery when I landed.",
+    "rating": 5,
+    "product": "loop-one-wireless",
+    "_source": "owner"
+  },
+  {
+    "id": "priya-raman",
+    "name": "Priya Raman",
+    "from": "Kitchen listener, Berkeley",
+    "quote": "Two Harbour Minis paired for stereo. It sounds far bigger than it looks.",
+    "rating": 5,
+    "product": "harbour-mini",
+    "_source": "owner"
+  },
+  {
+    "id": "tom-alvarez",
+    "name": "Tom Alvarez",
+    "from": "Runner, SF",
+    "quote": "The Sport tips stay put for twenty miles. Nothing else has.",
+    "rating": 4,
+    "product": "loop-air-2-sport",
+    "_source": "owner"
+  }
+]

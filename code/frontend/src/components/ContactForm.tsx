@@ -43,19 +43,20 @@ export default function ContactForm({ fields = [], className = "" }: { fields?: 
   if (state === "sent") {
     return <T k="contact.form.sent" as="p" className={`text-lg ${className}`} />;
   }
-  const input = "w-full rounded border border-line bg-ground px-4 py-3 text-ink";
+  const input = "w-full rounded bg-ground px-4 py-3 text-ink placeholder:text-ink-soft";
   return (
-    <form onSubmit={(e) => void submit(e)} className={`flex flex-col gap-4 ${className}`}>
-      <Field k="name"><input name="name" autoComplete="name" required className={input} /></Field>
-      <Field k="reply_to"><input name="reply_to" autoComplete="tel" required className={input} /></Field>
+    <form data-testid="contact-form" onSubmit={(e) => void submit(e)} className={`flex flex-col gap-4 ${className}`}>
+      <Field k="name"><input id="name" name="name" autoComplete="name" required className={input} /></Field>
+      <Field k="reply_to"><input id="reply_to" name="reply_to" autoComplete="tel" required className={input} /></Field>
       {fields.map((f) => (
-        <Field key={f.key} k={`fields.${f.key}`}><input name={f.key} type={f.type ?? "text"} className={input} /></Field>
+        <Field key={f.key} k={`fields.${f.key}`}><input id={f.key} name={f.key} type={f.type ?? "text"} className={input} /></Field>
       ))}
-      <Field k="message"><textarea name="message" rows={4} className={input} /></Field>
+      <Field k="message"><textarea id="message" name="message" rows={4} className={input} /></Field>
       <input name="website" tabIndex={-1} autoComplete="off" aria-hidden="true" className="absolute -left-[9999px] h-px w-px opacity-0" />
       {state === "failed" && <p role="alert" className="text-sm text-ink">{problem}</p>}
       {!canSend && <p className="text-sm text-ink-soft">{offline}</p>}
-      <button type="submit" disabled={state === "sending"} className="self-start rounded bg-accent px-6 py-3 text-accent-ink disabled:opacity-60">
+      <button type="submit" data-testid="contact-send" disabled={state === "sending"}
+        className="label self-start rounded bg-accent px-7 py-4 text-accent-ink transition-opacity duration-[var(--duration-fast)] hover:opacity-85 disabled:opacity-60">
         <T k={state === "sending" ? "contact.form.sending" : "contact.form.send"} />
       </button>
     </form>
@@ -65,7 +66,7 @@ export default function ContactForm({ fields = [], className = "" }: { fields?: 
 function Field({ k, children }: { k: string; children: ReactNode }) {
   return (
     <label className="flex flex-col gap-2 text-sm">
-      <T k={`contact.form.${k}`} className="text-ink-soft" />
+      <T k={`contact.form.${k}`} className="label text-ink-soft" />
       {children}
     </label>
   );

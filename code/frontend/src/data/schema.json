@@ -1,3 +1,55 @@
 {
-  "collections": {}
+  "collections": {
+    "products": {
+      "label": "Products",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "category", "label": "Category", "type": "ref:categories" },
+        { "key": "price", "label": "Price", "type": "price", "currency": "USD" },
+        { "key": "oldPrice", "label": "Old price", "type": "price", "currency": "USD" },
+        { "key": "unit", "label": "Unit", "type": "text" },
+        { "key": "summary", "label": "Short description", "type": "text" },
+        { "key": "details", "label": "Details", "type": "longtext" },
+        { "key": "image", "label": "Picture", "type": "image" },
+        { "key": "featured", "label": "Featured", "type": "bool" },
+        { "key": "available", "label": "Available", "type": "bool" },
+        { "key": "stock", "label": "In stock", "type": "number" },
+        { "key": "specs", "label": "Specifications", "type": "list" }
+      ]
+    },
+    "categories": {
+      "label": "Categories",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "description", "label": "Description", "type": "text" },
+        { "key": "image", "label": "Picture", "type": "image" }
+      ]
+    },
+    "reviews": {
+      "label": "Customer reviews",
+      "fields": [
+        { "key": "name", "label": "Name", "type": "text" },
+        { "key": "from", "label": "Where they are", "type": "text" },
+        { "key": "quote", "label": "What they said", "type": "longtext" },
+        { "key": "rating", "label": "Rating out of five", "type": "number" },
+        { "key": "product", "label": "Product", "type": "ref:products" }
+      ]
+    },
+    "faq": {
+      "label": "Questions and answers",
+      "fields": [
+        { "key": "question", "label": "Question", "type": "text" },
+        { "key": "answer", "label": "Answer", "type": "longtext" }
+      ]
+    },
+    "orders": {
+      "label": "Past orders",
+      "fields": [
+        { "key": "placed", "label": "Placed on", "type": "text" },
+        { "key": "status", "label": "Status", "type": "text" },
+        { "key": "total", "label": "Total", "type": "price", "currency": "USD" },
+        { "key": "items", "label": "What was in it", "type": "text" }
+      ]
+    }
+  }
 }

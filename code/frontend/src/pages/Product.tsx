@@ -1,0 +1,103 @@
+import { Link, useParams } from "react-router-dom";
+import { T } from "../editable";
+import { useCollection, useRecord } from "../data";
+import { usePageMeta } from "../seo";
+import Icon from "../components/Icon";
+import Rating from "../components/Rating";
+import ProductImage from "../components/ProductImage";
+import ProductCard from "../components/ProductCard";
+import BuyBox from "../components/BuyBox";
+import Reveal from "../components/Reveal";
+import type { Product as ProductRow, Review } from "../lib/catalogue";
+
+/**
+ * One product. The first screen carries the large picture, the name, the
+ * price, the stock line, the stepper and the add-to-cart button together; the
+ * full spec table is a hairline-ruled two-column table below it.
+ */
+export default function Product() {
+  const { id } = useParams<{ id: string }>();
+  usePageMeta("pages.product.title", "pages.product.description");
+  const { item, loading } = useRecord<ProductRow>("products", id);
+
+  const { items: siblings } = useCollection<ProductRow>("products", item ? { where: { category: item.category }, pageSize: 12 } : { pageSize: 1 });
+  const { items: reviews } = useCollection<Review>("reviews", item ? { where: { product: item.id }, pageSize: 4 } : { pageSize: 1 });
+  const related = siblings.filter((p) => p.id !== item?.id).slice(0, 3);
+
+  if (loading) return <p className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-16)] text-ink-soft"><T k="shop.loading" /></p>;
+  if (!item) return (
+    <div className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-16)]">
+      <T k="shop.empty" as="p" className="text-ink-soft" />
+      <Link to="/shop" className="label mt-6 inline-flex items-center gap-2 text-accent hover:underline">
+        <Icon name="back" size={16} /><T k="product.backToShop" />
+      </Link>
+    </div>
+  );
+
+  return (
+    <div className="mx-auto max-w-page px-[var(--gutter)] py-[var(--space-12)]">
+      <Link to={`/shop/${item.category}`} data-testid="back-to-shelf"
+        className="label inline-flex items-center gap-2 text-ink-soft transition-colors duration-[var(--duration-fast)] hover:text-ink">
+        <Icon name="back" size={16} /><T k="product.backToShop" />
+      </Link>
+
+      <div data-record={`products:${item.id}`} className="mt-8 grid gap-10 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+        <ProductImage src={item.image} alt={item.name} aspect="1/1" eager
+          slot={`/images/products/${item.id}.png`} caption={item.name} />
+
+        <div className="flex flex-col">
+          <h1 className="text-[var(--size-h2)]">{item.name}</h1>
+          <p className="mt-4 leading-relaxed text-ink-soft">{item.summary}</p>
+          <BuyBox product={item} />
+        </div>
+      </div>
+
+      <Reveal as="section" className="mt-[var(--space-24)] grid gap-10 border-t border-line pt-10 lg:grid-cols-2 lg:gap-16">
+        <div>
+          <T k="product.about" as="h2" />
+          <p className="mt-5 max-w-[60ch] leading-relaxed text-ink-soft">{item.details}</p>
+        </div>
+        <div>
+          <T k="product.specs" as="h2" />
+          <table className="mt-5 w-full border-collapse text-sm">
+            <tbody>
+              {item.specs.map((s) => (
+                <tr key={s.label} className="border-b border-line">
+                  <th scope="row" className="label w-[40%] py-3 pr-4 text-left align-top font-normal text-ink-soft">{s.label}</th>
+                  <td className="py-3 align-top">{s.value}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </Reveal>
+
+      {reviews.length > 0 && (
+        <Reveal as="section" className="mt-[var(--space-24)] border-t border-line pt-10">
+          <T k="product.reviews" as="h2" />
+          <ul className="mt-8 grid gap-8 sm:grid-cols-2">
+            {reviews.map((r) => (
+              <li key={r.id} data-record={`reviews:${r.id}`} className="flex flex-col gap-3">
+                <Rating value={r.rating} />
+                <blockquote className="leading-relaxed">{r.quote}</blockquote>
+                <p className="text-sm text-ink-soft">{r.name} · {r.from}</p>
+              </li>
+            ))}
+          </ul>
+        </Reveal>
+      )}
+
+      {/* The related row is hidden while this product has no photograph of
+          its own: otherwise the only product picture on the page belongs to a
+          neighbour, and the page reads as if that were this product. */}
+      {item.image !== "" && related.length >= 3 && (
+        <Reveal as="section" className="mt-[var(--space-24)] border-t border-line pt-10">
+          <T k="product.related" as="h2" />
+          <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {related.map((p) => <li key={p.id}><ProductCard product={p} /></li>)}
+          </ul>
+        </Reveal>
+      )}
+    </div>
+  );
+}

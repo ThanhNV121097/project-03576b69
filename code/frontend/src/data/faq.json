@@ -1,0 +1,44 @@
+[
+  {
+    "id": "how-do-i-pay",
+    "question": "How do I pay?",
+    "answer": "By card at checkout \u2014 Visa or Mastercard \u2014 and with Apple Pay on a device that has it. Card details never touch our servers; Stripe handles the payment.",
+    "_source": "owner"
+  },
+  {
+    "id": "which-checkout",
+    "question": "Can I pay by card as well as Apple Pay?",
+    "answer": "",
+    "_source": "assumed"
+  },
+  {
+    "id": "when-will-my-order-arrive",
+    "question": "When will my order arrive?",
+    "answer": "Two to five business days anywhere in the US. Free over $75, $9 under.",
+    "_source": "owner"
+  },
+  {
+    "id": "can-i-return-something",
+    "question": "Can I return something I have listened to?",
+    "answer": "Yes. Thirty days, used or not, as long as you have the box. We pay the return shipping.",
+    "_source": "owner"
+  },
+  {
+    "id": "do-the-speakers-come-with-stands",
+    "question": "Do the speakers come with stands?",
+    "answer": "The Harbour 200 does. The 500 stands on its own; the Mini and Field do not need any.",
+    "_source": "owner"
+  },
+  {
+    "id": "is-there-a-warranty",
+    "question": "Is there a warranty?",
+    "answer": "Two years on everything, three on the Loop-branded range. Keep the order number; that is all we ask for.",
+    "_source": "owner"
+  },
+  {
+    "id": "do-you-have-a-shop",
+    "question": "Do you have a shop I can visit?",
+    "answer": "Yes, 1142 Folsom Street in San Francisco, Monday to Saturday, 10:00 to 18:00.",
+    "_source": "owner"
+  }
+]

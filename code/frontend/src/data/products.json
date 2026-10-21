@@ -1,0 +1,262 @@
+[
+  {
+    "id": "loop-one-wireless",
+    "name": "Loop One Wireless",
+    "category": "headphones",
+    "price": 349,
+    "oldPrice": 399,
+    "unit": "pair",
+    "summary": "Over-ear wireless headphones with adaptive noise cancelling.",
+    "details": "40 mm beryllium-coated drivers, 38 h battery with ANC on, USB-C fast charge (10 min = 6 h), Bluetooth 5.3 with LDAC and aptX Adaptive, multipoint to two devices. Memory-foam earpads in lambskin, replaceable without tools. 268 g.",
+    "image": "/images/products-loop-one-wireless.png",
+    "featured": true,
+    "available": true,
+    "stock": 14,
+    "specs": [
+      { "label": "Drivers", "value": "40 mm beryllium-coated" },
+      { "label": "Battery", "value": "38 h with ANC on" },
+      { "label": "Charging", "value": "USB-C, 10 min = 6 h" },
+      { "label": "Bluetooth", "value": "5.3, LDAC and aptX Adaptive" },
+      { "label": "Multipoint", "value": "Two devices" },
+      { "label": "Earpads", "value": "Lambskin memory foam, tool-free" },
+      { "label": "Weight", "value": "268 g" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "loop-studio-pro",
+    "name": "Loop Studio Pro",
+    "category": "headphones",
+    "price": 279,
+    "unit": "pair",
+    "summary": "Open-back studio headphones for mixing at home.",
+    "details": "45 mm dynamic drivers, 32 ohm, 10 Hz–40 kHz. Open-back for a wide stage; not for noisy rooms. Detachable 3 m cable, 6.35 mm and 3.5 mm leads. Velour pads. 295 g.",
+    "image": "/images/product-loop-studio-pro.png",
+    "featured": true,
+    "available": true,
+    "stock": 9,
+    "specs": [
+      { "label": "Drivers", "value": "45 mm dynamic" },
+      { "label": "Impedance", "value": "32 ohm" },
+      { "label": "Frequency", "value": "10 Hz – 40 kHz" },
+      { "label": "Enclosure", "value": "Open-back; not for noisy rooms" },
+      { "label": "Cable", "value": "Detachable 3 m, 6.35 mm and 3.5 mm" },
+      { "label": "Pads", "value": "Velour" },
+      { "label": "Weight", "value": "295 g" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "loop-air-2",
+    "name": "Loop Air 2",
+    "category": "headphones",
+    "price": 179,
+    "unit": "pair",
+    "summary": "In-ear buds with hybrid ANC and a case that charges twice over.",
+    "details": "11 mm drivers, 7 h a charge and 28 h with the case, IPX5, wireless charging, four ear-tip sizes. Transparency mode you can hold a conversation through.",
+    "image": "/images/product-loop-air-2.png",
+    "featured": true,
+    "available": true,
+    "stock": 31,
+    "specs": [
+      { "label": "Drivers", "value": "11 mm" },
+      { "label": "Battery", "value": "7 h a charge, 28 h with the case" },
+      { "label": "Water resistance", "value": "IPX5" },
+      { "label": "Charging", "value": "USB-C and wireless" },
+      { "label": "Ear tips", "value": "Four sizes" },
+      { "label": "Transparency", "value": "Hold a conversation through it" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "loop-air-2-sport",
+    "name": "Loop Air 2 Sport",
+    "category": "headphones",
+    "price": 199,
+    "unit": "pair",
+    "summary": "The Air 2 with a wing tip, for running.",
+    "details": "Same drivers as the Air 2 with a silicone wing that holds through a long run. IPX7, rinseable. 6 h a charge, 24 h with the case.",
+    "image": "/images/product-loop-air-2-sport.png",
+    "featured": false,
+    "available": true,
+    "stock": 22,
+    "specs": [
+      { "label": "Drivers", "value": "11 mm, as the Air 2" },
+      { "label": "Fit", "value": "Silicone wing tip" },
+      { "label": "Water resistance", "value": "IPX7, rinseable" },
+      { "label": "Battery", "value": "6 h a charge, 24 h with the case" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "harbour-200",
+    "name": "Harbour 200 Bookshelf",
+    "category": "speakers",
+    "price": 699,
+    "unit": "pair",
+    "summary": "Powered bookshelf speakers for a desk or a small room.",
+    "details": "130 W a pair, 5.25 in woven-fibre woofer and 1 in silk-dome tweeter, HDMI ARC, optical, RCA and Bluetooth aptX HD. Real walnut cabinets, 320 × 185 × 240 mm each. Remote and stands included.",
+    "image": "/images/product-harbour-200.png",
+    "featured": true,
+    "available": true,
+    "stock": 6,
+    "specs": [
+      { "label": "Power", "value": "130 W a pair" },
+      { "label": "Woofer", "value": "5.25 in woven fibre" },
+      { "label": "Tweeter", "value": "1 in silk dome" },
+      { "label": "Inputs", "value": "HDMI ARC, optical, RCA, Bluetooth aptX HD" },
+      { "label": "Cabinet", "value": "Real walnut, 320 × 185 × 240 mm each" },
+      { "label": "In the box", "value": "Remote and stands" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "harbour-mini",
+    "name": "Harbour Mini",
+    "category": "speakers",
+    "price": 329,
+    "oldPrice": 379,
+    "unit": "each",
+    "summary": "One small speaker that fills a kitchen.",
+    "details": "60 W, 4 in woofer with twin passive radiators, Wi-Fi and Bluetooth, AirPlay 2 and Spotify Connect. Pair two for stereo. 180 × 120 × 130 mm.",
+    "image": "/images/product-harbour-mini.png",
+    "featured": true,
+    "available": true,
+    "stock": 18,
+    "specs": [
+      { "label": "Power", "value": "60 W" },
+      { "label": "Woofer", "value": "4 in with twin passive radiators" },
+      { "label": "Network", "value": "Wi-Fi and Bluetooth" },
+      { "label": "Streaming", "value": "AirPlay 2 and Spotify Connect" },
+      { "label": "Stereo", "value": "Pair two" },
+      { "label": "Size", "value": "180 × 120 × 130 mm" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "harbour-field",
+    "name": "Harbour Field",
+    "category": "speakers",
+    "price": 219,
+    "unit": "each",
+    "summary": "A portable speaker that survives the beach.",
+    "details": "IP67, 20 h battery, USB-C out to charge a phone, 50 W with a passive radiator each side. Strap included. 790 g.",
+    "image": "/images/product-harbour-field.png",
+    "featured": false,
+    "available": true,
+    "stock": 25,
+    "specs": [
+      { "label": "Water resistance", "value": "IP67" },
+      { "label": "Battery", "value": "20 h" },
+      { "label": "Power out", "value": "USB-C, charges a phone" },
+      { "label": "Power", "value": "50 W, a passive radiator each side" },
+      { "label": "Weight", "value": "790 g" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "harbour-500",
+    "name": "Harbour 500 Floorstander",
+    "category": "speakers",
+    "price": 1890,
+    "unit": "pair",
+    "summary": "Floorstanding speakers for a proper listening room.",
+    "details": "Three-way, twin 6.5 in woofers, 180 W a channel, room correction over USB. 1020 × 220 × 310 mm, 24 kg each. Delivered on a pallet, two-person lift.",
+    "image": "/images/product-harbour-500.png",
+    "featured": false,
+    "available": true,
+    "stock": 3,
+    "specs": [
+      { "label": "Design", "value": "Three-way, twin 6.5 in woofers" },
+      { "label": "Power", "value": "180 W a channel" },
+      { "label": "Room correction", "value": "Over USB" },
+      { "label": "Size", "value": "1020 × 220 × 310 mm" },
+      { "label": "Weight", "value": "24 kg each" },
+      { "label": "Delivery", "value": "On a pallet, two-person lift" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "tether-dac",
+    "name": "Tether USB-C DAC",
+    "category": "accessories",
+    "price": 149,
+    "unit": "each",
+    "summary": "A pocket DAC that drives any headphone from a phone.",
+    "details": "ES9038Q2M, up to 32-bit/768 kHz and DSD512, 3.5 mm and 4.4 mm balanced out, 125 mW into 32 ohm. Aluminium, 28 g.",
+    "image": "/images/product-tether-dac.png",
+    "featured": false,
+    "available": true,
+    "stock": 12,
+    "specs": [
+      { "label": "Chip", "value": "ES9038Q2M" },
+      { "label": "Resolution", "value": "32-bit / 768 kHz, DSD512" },
+      { "label": "Outputs", "value": "3.5 mm and 4.4 mm balanced" },
+      { "label": "Power", "value": "125 mW into 32 ohm" },
+      { "label": "Body", "value": "Aluminium, 28 g" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "loop-cable-kit",
+    "name": "Loop Cable Kit",
+    "category": "accessories",
+    "price": 59,
+    "unit": "set",
+    "summary": "Three braided cables that fit everything we sell.",
+    "details": "1.2 m 3.5 mm, 3 m 6.35 mm and a 1.5 m USB-C to USB-C, oxygen-free copper, fabric braid, two-year warranty. In a zip case.",
+    "image": "/images/product-loop-cable-kit.png",
+    "featured": false,
+    "available": true,
+    "stock": 40,
+    "specs": [
+      { "label": "In the set", "value": "1.2 m 3.5 mm, 3 m 6.35 mm, 1.5 m USB-C" },
+      { "label": "Conductor", "value": "Oxygen-free copper" },
+      { "label": "Jacket", "value": "Fabric braid" },
+      { "label": "Warranty", "value": "Two years" },
+      { "label": "In the box", "value": "Zip case" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "loop-earpads",
+    "name": "Memory Foam Earpads",
+    "category": "accessories",
+    "price": 39,
+    "unit": "pair",
+    "summary": "Replacement pads for the Loop One and Studio Pro.",
+    "details": "Lambskin or velour, memory foam, twist-lock mount. Swap them in under a minute; no tools.",
+    "image": "",
+    "featured": false,
+    "available": true,
+    "stock": 48,
+    "specs": [
+      { "label": "Material", "value": "Lambskin or velour" },
+      { "label": "Filling", "value": "Memory foam" },
+      { "label": "Mount", "value": "Twist-lock, no tools" },
+      { "label": "Fits", "value": "Loop One Wireless, Loop Studio Pro" }
+    ],
+    "_source": "owner"
+  },
+  {
+    "id": "loop-desk-stand",
+    "name": "Desk Stand",
+    "category": "accessories",
+    "price": 79,
+    "unit": "each",
+    "summary": "A weighted aluminium stand for a pair of headphones.",
+    "details": "Anodised aluminium with a felt cradle and a 1.4 kg base, cable channel at the back. Holds any over-ear pair.",
+    "image": "",
+    "featured": false,
+    "available": true,
+    "stock": 16,
+    "specs": [
+      { "label": "Body", "value": "Anodised aluminium" },
+      { "label": "Cradle", "value": "Felt" },
+      { "label": "Base", "value": "1.4 kg" },
+      { "label": "Cable", "value": "Channel at the back" },
+      { "label": "Fits", "value": "Any over-ear pair" }
+    ],
+    "_source": "owner"
+  }
+]
