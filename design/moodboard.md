@@ -27,14 +27,15 @@ accent, the vertical street label and the pale product panel on a dark card are 
 **Put the room in the picture.** The site opens on a dark photograph of a listening room that
 runs full-bleed across the top two thirds of the first screen; the headline sits over its left
 third and runs off the right edge of the viewport; three products sit on tiles along the bottom
-of that same screen. The site ships in one mode, and it is the light print of that room: the
-ground is `#F4F2EF` with a `#FFFFFF` surface, the ink `#15161A`, the soft ink `#5D5A54`,
-hairlines `#DCD7CF`, and a single accent — amber `#8A5214`, the colour of a valve lamp and of
-the showroom's light, darkened from the `#E8A33D` of the direction's board because the lighter
-amber measured 4.36:1 on paper and this one carries 4.5:1 — through every price, every primary
-button and every focus ring. The near-black room survives where the direction needs it: the
-hero and the showroom band wear `.room`, which restates the seven tokens dark inside those two
-bands only. It is a section treatment, not a second mode; there is no theme switch. Display is
+of that same screen. The site ships in one mode and it is the room itself: the ground is
+near-black `#0B0B0C` with a `#15161A` surface, the ink a warm off-white `#F2F0ED`, the soft ink
+`#9A9790`, hairlines `#2A2B30`, and a single accent — amber `#E8A33D`, the colour of a valve
+lamp and of the showroom's light — through every price, every primary button and every focus
+ring. Those are the owner's seven, in `:root`; there is no second palette, no `[data-theme]`
+block and no switch in the header. The one place a light surface appears is the pale panel each
+cut-out product sits on (`--product-ground`): a black or silver product cut out onto a
+near-black tile loses its shading, so the card stays dark and the panel is the lit window in
+it. Display is
 **Syne 500** (the one
 house-style unlock taken here: a display sans with real character, its tightened slightly
 condensed caps hold over a photograph where a neutral sans disappears); body is
