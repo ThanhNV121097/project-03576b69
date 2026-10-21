@@ -112,10 +112,10 @@ h3 { font-size: var(--size-h3); }
 }
 
 /**
- * The room: the dark band the hero photograph and the showroom section sit
- * in. This design's first screen is the dark listening room whichever mode
- * the visitor is in — so these seven values are restated here, and every
- * element inside the band uses the ordinary token names.
+ * The room: the band the hero photograph and the showroom section sit in.
+ * It carries the same seven values :root does; they are restated here so a
+ * band over a photograph stays the room even if a parent ever changes them,
+ * and every element inside uses the ordinary token names.
  */
 .room {
   --ground: #0B0B0C;
