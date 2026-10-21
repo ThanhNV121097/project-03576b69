@@ -37,9 +37,9 @@ hero and the showroom band wear `.room`, which restates the seven tokens dark in
 bands only. It is a section treatment, not a second mode; there is no theme switch. Display is
 **Syne 500** (the one
 house-style unlock taken here: a display sans with real character, its tightened slightly
-condensed caps hold at 64px over a photograph where a neutral sans disappears); body is
-**Inter 400**. Scale at 1440: h1 64px / -0.03em / 1.02, h2 28px, product name 20px, price 24px
-tabular, vertical labels 11px at 0.22em. 64px is affordable here because the hero carries one
+condensed caps hold over a photograph where a neutral sans disappears); body is
+**Inter 400**. Scale at 1440: h1 56px / -0.03em / 1.02, h2 28px, product name 20px, price 24px
+tabular, vertical labels 11px at 0.22em. 56px is affordable here because the hero carries one
 headline and one line under it, with the goods and their prices in the bottom third of the same
 screen rather than below the fold. Motion is moderate: one load sequence of four steps under a
 second, a 16px/0.6s fade-and-rise as each section enters, and hover that lifts the product's
