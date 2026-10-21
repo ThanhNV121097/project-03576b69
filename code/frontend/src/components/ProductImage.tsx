@@ -52,8 +52,13 @@ export default function ProductImage({ src, alt, aspect = "1/1", slot, caption, 
            that asks for it reads as this product borrowing a neighbour's
            picture until it fails. */
         <div data-picture={slot || undefined} data-product-slot="" data-fit="contain" role="img" aria-label={alt}
-          className="absolute inset-0 flex h-full w-full items-end">
-          <span className="p-4 text-sm">{caption ?? alt}</span>
+          className="absolute inset-0 flex h-full w-full flex-col items-center justify-center gap-3 p-6 text-center">
+          <svg viewBox="0 0 24 24" width="28" height="28" fill="none" stroke="currentColor" strokeWidth="1.5" aria-hidden="true" className="shrink-0 opacity-70">
+            <rect x="3" y="4" width="18" height="16" />
+            <path d="M3 16l5-5 4 4 3-3 6 6" />
+            <circle cx="8.5" cy="8.5" r="1.5" />
+          </svg>
+          <span className="font-display text-sm">{caption ?? alt}</span>
         </div>
       )}
     </div>
