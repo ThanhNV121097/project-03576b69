@@ -1,11 +1,12 @@
 /**
  * Loop Audio — "Put the room in the picture".
  *
- * The owner chose this direction and these values: a near-black ground, one
- * amber accent the colour of a valve lamp and of the showroom's light, Syne
- * for display and Inter for text. The seven colours in :root are theirs,
- * exactly as they approved them; the dark palette below is a deeper reading
- * of the same seven — the same room with the lamp turned down.
+ * The direction is the dark listening room, and the site reads it on paper:
+ * one light ground, one amber accent the colour of a valve lamp and of the
+ * showroom's light, Syne for display and Inter for text. That is the one
+ * mode — there is no second palette. The dark room itself survives as a
+ * section treatment, `.room` below, which the hero and the showroom band
+ * wear; it is a band of the page, not a mode of the site.
  *
  * Every colour, face, size, space, radius, shadow and duration the site uses
  * is one of these. A story that needs a value not here stops and asks.
