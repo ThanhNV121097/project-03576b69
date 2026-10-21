@@ -26,8 +26,8 @@
   },
   "hero": {
     "eyebrow": "Showroom and online, since 2019",
-    "headline": "Hear the room before you buy the pair",
-    "sub": "Twelve things we can stand behind, two own ranges, and a room on Folsom Street where you can listen to all of them.",
+    "headline": "Hear the room before you buy the pair, in the showroom on Folsom Street",
+    "sub": "Twelve things we can stand behind, two of them our own. Every one is wired up and ready to play.",
     "cta": { "label": "Shop all twelve", "href": "/shop" },
     "secondary": { "label": "Visit the showroom", "href": "/contact" },
     "featuredLabel": "Picked this week"
