@@ -19,13 +19,17 @@ export default function Help() {
       {/* The questions and the two ways to reach the shop side by side, so the
           first screen's right half carries the phone and the email rather than
           nothing. */}
-      <div className="grid gap-10 lg:grid-cols-[1fr_300px] lg:grid-rows-[auto_1fr] lg:gap-x-16 lg:gap-y-12">
+      <div className="grid gap-x-10 gap-y-12 lg:grid-cols-[1fr_300px] lg:grid-rows-[auto_1fr] lg:gap-x-16">
+        {/* Row one is the page's own heading, row two the questions and the
+            aside side by side: the aside starts on the same line as the first
+            question at any heading length, with no hand-set margin. */}
         <div className="lg:col-start-1 lg:row-start-1">
-      <T k="help.label" as="p" className="label text-ink-soft" />
-      <T k="help.heading" as="h1" className="mt-3" />
-      <T k="help.sub" as="p" className="mt-5 max-w-[52ch] text-ink-soft" />
-
-      <dl className="mt-12 border-t border-line">
+          <T k="help.label" as="p" className="label text-ink-soft" />
+          <T k="help.heading" as="h1" className="mt-3" />
+          <T k="help.sub" as="p" className="mt-5 max-w-[52ch] text-ink-soft" />
+        </div>
+        <div className="lg:col-start-1 lg:row-start-2">
+      <dl className="border-t border-line">
         {items.map((q, i) => (
           <Reveal key={q.id} delay={Math.min(i, 6) * 40}>
             <div data-record={`faq:${q.id}`} data-testid={`faq-${q.id}`}
