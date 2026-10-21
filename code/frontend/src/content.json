@@ -17,7 +17,6 @@
       { "label": "Contact", "href": "/contact" }
     ],
     "cta": { "label": "Shop all", "href": "/shop" },
-    "theme": { "toLight": "Switch to light mode", "toDark": "Switch to dark mode" },
     "menu": { "open": "Open menu", "close": "Close menu" },
     "cart": "Cart",
     "account": "Your account",
