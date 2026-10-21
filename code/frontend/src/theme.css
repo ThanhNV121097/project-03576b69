@@ -85,34 +85,6 @@
   :root { --dock-space: 88px; }
 }
 
-/* The lamp turned down: the listening room at night, the owner's own seven. */
-@media (prefers-color-scheme: dark) {
-  :root:not([data-theme="light"]) {
-    --ground: #0B0B0C;
-    --surface: #15161A;
-    --ink: #F2F0ED;
-    --ink-soft: #9A9790;
-    --line: #2A2B30;
-    --accent: #E8A33D;
-    --accent-ink: #0B0B0C;
-    --product-ground: #E6E3DD;
-    --field-line: #5B5C64;
-  }
-}
-
-[data-theme="dark"] {
-  --ground: #0B0B0C;
-  --surface: #15161A;
-  --ink: #F2F0ED;
-  --ink-soft: #9A9790;
-  --line: #2A2B30;
-  --accent: #E8A33D;
-  --accent-ink: #0B0B0C;
-  --product-ground: #E6E3DD;
-  --field-line: #5B5C64;
-}
-
-
 /* Tailwind's preflight sets every heading to font-weight: inherit, so the
    display face's weight and tracking are stated here or nowhere. */
 h1, h2, h3, .display {
