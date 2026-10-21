@@ -4,7 +4,7 @@
     "logo": "",
     "description": "Loop Audio is a small San Francisco shop for headphones, speakers and the accessories that keep them working. Free US shipping over $75.",
     "locale": "en-US",
-    "defaultMode": "system",
+    "defaultMode": "light",
     "street": "Loop Audio · 1142 Folsom Street"
   },
   "nav": {
