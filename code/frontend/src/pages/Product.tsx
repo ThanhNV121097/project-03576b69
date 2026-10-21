@@ -87,7 +87,10 @@ export default function Product() {
         </Reveal>
       )}
 
-      {related.length >= 3 && (
+      {/* The related row is hidden while this product has no photograph of
+          its own: otherwise the only product picture on the page belongs to a
+          neighbour, and the page reads as if that were this product. */}
+      {item.image !== "" && related.length >= 3 && (
         <Reveal as="section" className="mt-[var(--space-24)] border-t border-line pt-10">
           <T k="product.related" as="h2" />
           <ul className="mt-8 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
