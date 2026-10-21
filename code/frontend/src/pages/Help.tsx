@@ -61,7 +61,7 @@ function Reach() {
   const phone = useContent<string>("contact.phone");
   const email = useContent<string>("contact.email");
   return (
-    <aside className="flex h-fit flex-col gap-6 border-t border-line pt-8 lg:mt-[7.5rem]">
+    <aside className="flex h-fit flex-col gap-6 border-t border-line pt-8 lg:col-start-2 lg:row-start-2">
       <T k="contact.label" as="p" className="label text-ink-soft" />
       <div className="flex items-start gap-3">
         <Icon name="phone" size={18} className="mt-1 text-accent" />
