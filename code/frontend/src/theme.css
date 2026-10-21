@@ -13,25 +13,26 @@
  */
 
 :root {
-  /* colour, light: the same room by day — the owner's seven read on paper,
-     with the amber darkened to #A1631A so it carries 4.5:1 on this ground */
-  --ground: #F4F2EF;
-  --surface: #FFFFFF;
-  --ink: #15161A;
-  --ink-soft: #5D5A54;
-  --line: #DCD7CF;
-  --accent: #8A5214;
-  --accent-ink: #FFFFFF;
+  /* colour: the listening room, the owner's seven exactly as they approved
+     them. Amber #E8A33D carries 9.8:1 on this ground — it is the ink of every
+     price, and the ground of a primary button whose own ink is the room. */
+  --ground: #0B0B0C;
+  --surface: #15161A;
+  --ink: #F2F0ED;
+  --ink-soft: #9A9790;
+  --line: #2A2B30;
+  --accent: #E8A33D;
+  --accent-ink: #0B0B0C;
 
   /* a field's edge: --line is a hairline between blocks and disappears
      against the ground, but a reader has to see where to type */
-  --field-line: #8B867D;
+  --field-line: #5B5C64;
 
-  /* the lit panel a cut-out product sits on — light in both modes, because a
-     black or silver product cut out onto a dark ground loses its shading */
+  /* the lit panel a cut-out product sits on — light on this dark ground,
+     because a black or silver product cut out onto it loses its shading */
   --product-ground: #E6E3DD;
 
-  /* the ink on that panel, dark in both modes: it is a light tile */
+  /* the ink on that panel: it is a light tile whatever the page around it */
   --product-ink: #3A3833;
 
   /* typography */
