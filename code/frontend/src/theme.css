@@ -41,6 +41,11 @@
   --weight-display: 500;
   --tracking-display: -0.03em;
   --size-h1: clamp(32px, 4.4vw, 56px);
+  /* the hero line only: it is set to the viewport, not to a column, so the
+     sentence is always wider than the screen and its last word is cut by the
+     right edge — the direction's one device. 76px at 1440. */
+  --size-hero: clamp(32px, 5.3vw, 120px);
+  --tracking-hero: -0.01em;
   --size-h2: clamp(22px, 2.4vw, 28px);
   --size-h3: 20px;
   --size-price: 24px;
