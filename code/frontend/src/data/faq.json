@@ -2,7 +2,7 @@
   {
     "id": "how-do-i-pay",
     "question": "How do I pay?",
-    "answer": "Apple Pay at checkout. Card details never touch our servers \u2014 Stripe handles the payment.",
+    "answer": "By card at checkout \u2014 Visa or Mastercard \u2014 and with Apple Pay on a device that has it. Card details never touch our servers; Stripe handles the payment.",
     "_source": "owner"
   },
   {
