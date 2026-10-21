@@ -96,7 +96,9 @@ function Hero({ featured }: { featured: Product[] }) {
                       className="transition-transform duration-[var(--duration-fast)] group-hover:scale-[1.03]" />
                   </div>
                   <div className="min-w-0 flex-1">
-                    <p className="truncate font-display text-[var(--size-h3)]">{p.name}</p>
+                    {/* Wrapping, not truncated: a long name (Harbour 500
+                        Floorstander) takes a second line rather than clipping. */}
+                    <p className="font-display text-[var(--size-h3)] leading-[1.15]">{p.name}</p>
                     <Price amount={p.price} was={p.oldPrice} className="mt-1 text-accent" />
                   </div>
                 </Link>
