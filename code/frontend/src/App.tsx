@@ -8,7 +8,6 @@ import Logo from "./components/Logo";
 import Icon from "./components/Icon";
 import MenuToggle from "./components/MenuToggle";
 import MobileMenu from "./components/MobileMenu";
-import ThemeToggle from "./components/ThemeToggle";
 import ContactDock from "./components/ContactDock";
 import PhotoCredits from "./components/PhotoCredits";
 import Home from "./pages/Home";
