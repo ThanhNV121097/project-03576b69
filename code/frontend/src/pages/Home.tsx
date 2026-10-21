@@ -56,14 +56,18 @@ function Hero({ featured }: { featured: Product[] }) {
       <div className="relative z-10 flex min-h-[calc(100svh-var(--header-h))] flex-col justify-between pt-[clamp(28px,6vh,64px)]">
         {/* The headline over the photograph's left third, running off the right edge. */}
         <div className="mx-auto w-full max-w-page px-[var(--gutter)]">
+          <T k="hero.eyebrow" as="p" className="label rise text-accent" />
+          {/* The direction's one device: from 1024px this line is set to the
+              viewport rather than to a column — one unbroken sentence, far
+              wider than the screen, whose last words are cut off by the right
+              edge (the section is overflow-hidden). Below 1024px it wraps and
+              the sentence is whole. */}
+          <h1 data-testid="hero-headline"
+            className="rise mt-5 w-full text-[var(--size-hero)] tracking-[var(--tracking-hero)] lg:w-auto lg:whitespace-nowrap"
+            style={{ ["--rise-delay" as string]: "80ms" }}>
+            <T k="hero.headline" />
+          </h1>
           <div className="max-w-full sm:max-w-[72%] lg:max-w-[46%]">
-            <T k="hero.eyebrow" as="p" className="label rise text-accent" />
-            {/* The bleed is the direction's one clipped line, and it needs a
-                left third to be set over: from 1024px the headline runs off
-                the right edge, below that it wraps and the sentence is whole. */}
-            <h1 className="rise mt-5 lg:whitespace-nowrap" style={{ ["--rise-delay" as string]: "80ms" }}>
-              <T k="hero.headline" />
-            </h1>
             <div className="rise" style={{ ["--rise-delay" as string]: "160ms" }}>
               <T k="hero.sub" as="p" className="mt-5 max-w-[46ch] text-base leading-relaxed text-ink-soft md:text-lg" />
             </div>
