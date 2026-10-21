@@ -60,6 +60,6 @@ window in it, and it is what keeps every product its photograph.
 - Every price on the site is tabular, right-aligned in any column of prices, and set at 24px or larger on a product card and a product page.
 - The shop page is a two-column asymmetric grid: a category rail on the left at 1024px and up, products on the right, never three equal columns of white cards.
 - The product page's first screen carries the large picture, the name, the price and the add-to-cart button together, with the spec table further down as a hairline-ruled two-column table.
-- One accent only — amber `#8A5214` on the light ground, `#E8A33D` inside the two `.room` bands — on prices, primary buttons and focus rings; nothing else on the site is coloured.
-- One mode: the light print in `:root`, `site.defaultMode: "light"`, no `[data-theme]` block, no `prefers-color-scheme` branch and no switch in the header or the menu.
+- One accent only — amber `#E8A33D` — on prices, primary buttons and focus rings; nothing else on the site is coloured.
+- One mode: the owner's seven in `:root`, `site.defaultMode: "dark"`, no `[data-theme]` block, no `prefers-color-scheme` branch and no switch in the header or the menu.
 - Every product picture shows that product. Where no honest photograph of it exists, the card carries a `<Picture>` slot with the product's name, never another product and never another maker's hardware.
