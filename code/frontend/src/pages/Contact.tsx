@@ -5,15 +5,17 @@ import ContactForm from "../components/ContactForm";
 import { Picture } from "../picture";
 
 /**
- * Contact: the owner's own phone and email exactly as they gave them, and the
- * message form, which reaches the owner in Agent Team. No address or opening
- * hours are shown — the brief's contact details give neither, and a shop's
- * address is a fact a customer can check.
+ * Contact: the owner's own phone, email, street and opening hours exactly as
+ * they gave them, and the message form, which reaches the owner in Agent
+ * Team. The home page's showroom button lands here, so the hours and the
+ * directions it promises are on this page.
  */
 export default function Contact() {
   usePageMeta("pages.contact.title", "pages.contact.description");
   const phone = useContent<string>("contact.phone");
   const email = useContent<string>("contact.email");
+  const address = useContent<string>("contact.address");
+  const hours = useContent<string>("contact.hours");
   return (
     <div className="mx-auto grid max-w-page gap-0 lg:grid-cols-[1fr_1fr]">
       <section className="room relative isolate overflow-hidden px-[var(--gutter)] py-[var(--space-16)]">
