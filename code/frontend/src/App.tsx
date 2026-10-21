@@ -91,7 +91,6 @@ function Header() {
           ))}
         </nav>
         <div className="flex items-center gap-1">
-          <ThemeToggle />
           <Link to={session ? "/account" : "/sign-in"} aria-label={session ? accountLabel : signInLabel}
             data-testid="account-link"
             className="grid h-10 w-10 place-items-center text-ink-soft transition-colors duration-[var(--duration-fast)] hover:text-ink">
