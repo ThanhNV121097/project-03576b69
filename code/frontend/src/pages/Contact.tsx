@@ -43,6 +43,20 @@ export default function Contact() {
                   className="mt-1 block font-display text-[var(--size-h3)] hover:text-accent">{email}</a>
               </div>
             </li>
+            <li className="flex items-start gap-4">
+              <Icon name="address" size={20} className="mt-1 text-accent" />
+              <div>
+                <T k="contact.addressLabel" as="p" className="label text-ink-soft" />
+                <p data-testid="contact-address" className="mt-1 font-display text-[var(--size-h3)] leading-[1.25]">{address}</p>
+              </div>
+            </li>
+            <li className="flex items-start gap-4">
+              <Icon name="hours" size={20} className="mt-1 text-accent" />
+              <div>
+                <T k="contact.hoursLabel" as="p" className="label text-ink-soft" />
+                <p data-testid="contact-hours" className="mt-1 font-display text-[var(--size-h3)] leading-[1.25]">{hours}</p>
+              </div>
+            </li>
           </ul>
         </div>
       </section>
