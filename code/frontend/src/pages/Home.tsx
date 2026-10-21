@@ -152,8 +152,8 @@ function Rest() {
     <Reveal as="section" className="mx-auto max-w-page px-[var(--gutter)] pb-[var(--space-24)]">
       <div className="flex flex-wrap items-end justify-between gap-4 border-t border-line pt-8">
         <div>
-          <T k="shop.label" as="p" className="label text-ink-soft" />
-          <T k="shop.heading" as="h2" className="mt-3" />
+          <T k="home.rest.label" as="p" className="label text-ink-soft" />
+          <T k="home.rest.heading" as="h2" className="mt-3" />
         </div>
         <Link to="/shop" data-testid="shop-all"
           className="label flex items-center gap-2 whitespace-nowrap text-accent hover:underline">
